@@ -1,0 +1,20 @@
+nav:
+  - title: "Services"
+    section: services
+
+  - title: "The Process"
+    section: textblock
+
+  - title: "FAQ"
+    section: home-loan-faq
+
+  - title: "Calculators"
+    section: calculators
+
+  - title: "Team"
+    section: team
+    
+  - title: "Contact"
+    url: /contact/
+
+

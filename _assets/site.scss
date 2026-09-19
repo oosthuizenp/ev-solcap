@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+// 1. Bootstrap functions & variables first
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+// 2. Your variables (override Bootstrap defaults before full import)
+@import "base/variables";
+@import "base/mixins";
+
+// 3. Bootstrap full import — only once
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// 4. Your component and layout styles
+@import "base/page";
+@import "components/buttons";
+@import "components/navbar";
+@import "components/client-scroll";
+@import "layout/contact-strip";
+@import "layout/calculators";
+@import "layout/clients";
+@import "layout/contact";
+@import "layout/expert";
+@import "layout/footer";
+@import "layout/hero";
+@import "layout/services";
+@import "layout/portfolio";
+@import "layout/team";
+@import "layout/testimonials";
+@import "layout/textblock";
+@import "layout/about";
+@import "layout/error-page";
+@import "layout/holding-page";
+
+// 5. Global body styles
+body {
+    overflow-x: hidden;
+    font-family: $font-family-base;
+    -webkit-tap-highlight-color: $primary;
+}
+
+.bg-newgray {
+    background-color: #f0f0f0;
+}
+
+.post {
+    max-width: 750px;
+    margin-top: 100px;
+}

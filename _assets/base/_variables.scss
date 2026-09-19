@@ -1,0 +1,54 @@
+// ======================================================
+// base/_variables.scss
+// ======================================================
+
+// Restated Bootstrap Variables
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+
+// Brand Colors
+$primary:        #0093c9; //00ACC8 
+$white:          #ffffff;
+$black:          #000000;
+$font-color-1:   $gray-900;   // dark text / footer background
+$font-color-2:   $gray-600;   // secondary text
+
+// Spacing
+$gap-sm:         0.5rem;
+$gap-md:         1rem;
+$gap-lg:         1.5rem;
+$gap-xl:         2.5rem;
+
+// Borders
+$border-width:   3px;
+$border-radius:  0;
+
+// Shadows
+$shadow-sm:      0 2px 6px rgba(0, 0, 0, 0.08);
+$shadow-md:      0 4px 12px rgba(0, 0, 0, 0.15);
+$shadow-lg:      0 8px 24px rgba(0, 0, 0, 0.2);
+
+// Typography
+$font-family-base:   'Poppins', sans-serif;
+$font-size-base:     1rem;
+$line-height-base:   1.6;
+
+// Paragraph
+$p-font-family:      $font-family-base;
+$p-font-style:       normal;
+$p-font-weight:      400;
+$p-font-size:        16px;
+$p-line-height:      26px;
+
+// Images
+// $header-image:   "./img/logo.png";
+$contact-image:  "./img/contact.png";
+
+

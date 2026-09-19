@@ -1,0 +1,45 @@
+<!-- Team -->
+<section class="page-section bg-light" id="{{ site.data.sitetext.team.section | default: 'team' }}">
+  <div class="container">
+
+    <!-- Centered Title -->
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">{{ site.data.sitetext.team.title }}</h2>
+        <h3 class="section-subheading text-muted">{{ site.data.sitetext.team.text }}</h3>
+      </div>
+    </div>
+
+    <!-- Team Grid -->
+    <div class="row mt-5">
+      {% for person in site.data.sitetext.team.people %}
+      {% assign person_label = person.name | replace: '<br>', ' ' | strip_html | strip %}
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="team-card-v">
+          <div class="team-card-image">
+            <img src="{{ person.image }}" alt="{{ person_label }}" loading="lazy" />
+          </div>
+          <div class="team-card-info">
+            <h3 class="team-card-name">{{ person.name }}</h3>
+            <p class="team-card-role">{{ person.role }}</p>
+            <p class="team-card-bio">{{ person.bio }}</p>
+            <div class="team-card-links">
+              {% for network in person.social %}
+              {% assign label_prefix = "Connect with" %}
+              {% if network.icon contains 'phone' %}{% assign label_prefix = "Call" %}{% endif %}
+              {% if network.icon contains 'envelope' %}{% assign label_prefix = "Email" %}{% endif %}
+              {% if network.icon contains 'whatsapp' %}{% assign label_prefix = "WhatsApp" %}{% endif %}
+              <a href="{{ network.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ label_prefix }} {{ person_label }}">
+                <i class="{{ network.icon }}"></i>
+              </a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+<!-- End Team -->

@@ -1,0 +1,33 @@
+<!-- contact-strip.html -->
+
+<div class="contact-strip" role="region" aria-label="Contact information">
+  <div class="container">
+    <div class="contact-strip__content">
+
+      <div class="contact-strip__item">
+        <a href="tel:{{ site.contact.phone | replace: ' ', '' }}" class="contact-strip__phone">
+          <i class="fas fa-phone contact-strip__icon" aria-hidden="true"></i>
+          <span>{{ site.contact.phone }}</span>
+        </a>
+      </div>
+
+      <div class="contact-strip__item">
+        <a href="mailto:{{ site.contact.email }}" class="contact-strip__email">
+          <i class="fas fa-envelope contact-strip__icon" aria-hidden="true"></i>
+          <span>{{ site.contact.email }}</span>
+        </a>
+      </div>
+
+      <div class="contact-strip__item">
+        <a href="https://wa.me/{{ site.contact.whatsapp }}?text={{ site.contact.whatsapp_message }}"
+           class="contact-strip__whatsapp"
+           target="_blank"
+           rel="noopener noreferrer">
+          <i class="fab fa-whatsapp contact-strip__icon" aria-hidden="true"></i>
+          <span>Message via WhatsApp</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>

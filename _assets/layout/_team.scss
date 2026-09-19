@@ -1,0 +1,350 @@
+// ── Team section (team.html) ─────────────────────────────
+// Asymmetric two-column layout: Office Hours (left) + Featured Member (right)
+
+.team-inner {
+  max-width: 1040px;
+  margin: 2.5rem auto 0;
+  display: flex;
+  gap: 40px;
+  align-items: stretch;
+}
+
+// ── LEFT: Office Hours Card ──
+.team-left {
+  flex: 0 0 360px;
+  max-width: 360px;
+}
+
+.team-hours-card {
+   background: $white;
+   border-radius: 16px;
+   padding: 24px;
+   box-shadow: $shadow-sm;
+   height: 324px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   border: 1px solid rgba($gray-300, 0.3);
+   transition: box-shadow 0.2s ease;
+
+   &:hover {
+     box-shadow: $shadow-md;
+   }
+}
+
+.team-hours-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.team-hours-icon {
+  font-size: 1.75rem;
+  color: $primary;
+}
+
+.team-hours-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #002d62;
+  margin: 0;
+  @include heading-font;
+}
+
+.team-hours-list {
+  p {
+    font-size: 0.95rem;
+    color: $gray-700;
+    margin: 0 0 6px;
+    @include body-font;
+    line-height: 1.6;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.team-hours-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba($gray-300, 0.4);
+
+  i {
+    color: $gray-500;
+    font-size: 0.95rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+
+  span {
+    font-size: 0.85rem;
+    color: $gray-600;
+    font-style: italic;
+    line-height: 1.5;
+    @include body-font;
+  }
+}
+
+// ── RIGHT: Featured Team Member ──
+.team-right {
+  flex: 1;
+  min-width: 0;
+}
+
+.team-featured-card {
+  background: $white;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  box-shadow: $shadow-sm;
+  border: 1px solid rgba($gray-300, 0.2);
+  height: 100%;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: $shadow-md;
+  }
+}
+
+.team-featured-image {
+  flex: 0 0 48%;
+  position: relative;
+  min-height: 320px;
+
+  img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.team-featured-info {
+   flex: 1;
+   padding: 24px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.team-featured-name {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #002d62;
+  margin: 0 0 4px;
+  line-height: 1.2;
+  @include heading-font;
+}
+
+.team-featured-role {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: $primary;
+  font-weight: 700;
+  margin: 0 0 18px;
+  @include heading-font;
+}
+
+.team-featured-bio {
+  font-size: 0.9rem;
+  color: $gray-600;
+  line-height: 1.7;
+  font-style: italic;
+  margin: 0 0 28px;
+  @include body-font;
+}
+
+.team-featured-links {
+  display: flex;
+  gap: 12px;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: rgba($primary, 0.08);
+    color: $primary;
+    font-size: 1.1rem;
+    transition: background 0.2s, color 0.2s;
+
+    &:hover {
+      background: $primary;
+      color: $white;
+    }
+  }
+}
+
+// ── Team v3 / Grid Layout (team3.html) ───────────────────
+.team-card-v {
+  background: $white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: $shadow-sm;
+  border: 1px solid rgba($gray-300, 0.2);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $shadow-md;
+  }
+}
+
+.team-card-image {
+   position: relative;
+   width: 100%;
+   padding-top: 100%; // Square aspect ratio
+   background: $gray-100;
+
+   img {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+   }
+}
+
+.team-card-image--icon {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.team-card-image--icon i {
+   font-size: 4rem;
+   color: $primary;
+}
+
+.team-card-info {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.team-card-name {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #002d62;
+  margin: 0 0 4px;
+  line-height: 1.1;
+  @include heading-font;
+}
+
+.team-card-role {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $primary;
+  font-weight: 700;
+  margin: 0 0 16px;
+  @include heading-font;
+}
+
+.team-card-bio {
+  font-size: 0.88rem;
+  color: $gray-600;
+  line-height: 1.6;
+  margin: 0 0 20px;
+  @include body-font;
+}
+
+.team-card-links {
+  margin-top: auto;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba($primary, 0.08);
+    color: $primary;
+    font-size: 1rem;
+    transition: background 0.2s, color 0.2s;
+
+    &:hover {
+      background: $primary;
+      color: $white;
+    }
+  }
+}
+
+.team-hours-footer {
+  text-align: center;
+  padding: 15px;
+  background: rgba($gray-200, 0.3);
+  border-radius: 12px;
+  border: 1px solid rgba($gray-300, 0.2);
+}
+
+.team-hours-inline {
+  font-size: 0.9rem;
+  color: $gray-700;
+  @include body-font;
+
+  i {
+    color: $primary;
+  }
+
+  strong {
+    color: #002d62;
+    margin-right: 8px;
+  }
+
+  span {
+    white-space: nowrap;
+  }
+}
+
+// ── RESPONSIVE ──
+@media (max-width: 780px) {
+  .team-inner {
+    flex-direction: column;
+    gap: 24px;
+    align-items: stretch;
+  }
+
+  .team-left {
+    flex: none;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .team-featured-card {
+    flex-direction: column;
+  }
+
+  .team-featured-image {
+    flex: none;
+    min-height: 240px;
+    position: relative;
+  }
+
+  .team-featured-info {
+    padding: 28px 24px;
+  }
+
+  .team-featured-name {
+    font-size: 1.4rem;
+  }
+}

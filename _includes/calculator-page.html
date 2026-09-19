@@ -1,0 +1,68 @@
+{% assign calc = site.data.calculator_pages[page.calculator] %}
+
+<section class="calculator-hero calculator-hero--{{ page.calculator }}">
+  <div class="calculator-hero__swash calculator-hero__swash--one" aria-hidden="true"></div>
+  <div class="calculator-hero__swash calculator-hero__swash--two" aria-hidden="true"></div>
+  <div class="calculator-hero__swash calculator-hero__swash--three" aria-hidden="true"></div>
+
+  <div class="calculator-hero__inner">
+    <p class="calculator-hero__eyebrow">{{ calc.eyebrow }}</p>
+    <h1>{{ calc.title }}</h1>
+    <p class="calculator-hero__summary">{{ calc.summary }}</p>
+  </div>
+</section>
+
+<section class="calculator-guide">
+  <div class="calculator-guide__intro">
+    <div>
+      <h2>What this calculator helps with</h2>
+      <p>{{ calc.intro }}</p>
+      <p>{{ calc.goal }}</p>
+    </div>
+
+    <ul class="calculator-guide__list">
+      {% for item in calc.highlights %}
+        <li><i class="fas fa-check" aria-hidden="true"></i><span>{{ item }}</span></li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="calculator-frame" aria-label="{{ calc.title }}">
+    <iframe class="{{ page.iframe_class }}" frameborder="0" src="{{ page.iframe_src }}" title="{{ calc.title }}"></iframe>
+  </div>
+</section>
+
+<section class="calculator-faq">
+  <div class="calculator-faq__header">
+    <p class="calculator-faq__eyebrow">Quick answers</p>
+    <h2>Simple FAQs</h2>
+  </div>
+
+  <div class="calculator-faq__grid">
+    {% for faq in calc.faqs %}
+      <article class="calculator-faq__item">
+        <h3>{{ faq.question }}</h3>
+        <p>{{ faq.answer }}</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for faq in calc.faqs %}
+    {
+      "@type": "Question",
+      "name": {{ faq.question | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ faq.answer | jsonify }}
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>

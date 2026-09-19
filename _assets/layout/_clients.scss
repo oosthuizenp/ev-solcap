@@ -1,0 +1,60 @@
+// ======================================================
+// layout/_clients.scss
+// ======================================================
+
+#clients {
+  position: relative;
+  z-index: 1;
+
+  .section-heading {
+    @include heading-font;
+  }
+
+  .section-subheading {
+    @include muted-text;
+    color: $gray-600;
+  }
+
+  .client-logo-card {
+    width: 100px;
+    height: 100px;
+    background-color: $white;
+    border-radius: 12px;
+    box-shadow: $shadow-sm;
+    margin: $gap-sm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: $shadow-md;
+    }
+
+    img {
+      max-height: 50px;
+      max-width: 80px;
+      filter: grayscale(0%);
+      transition: filter 0.3s ease;
+    }
+  }
+
+  .section-heading:last-of-type {
+    margin-bottom: $gap-xl;
+  }
+
+  // Responsive
+  @include respond-to(mobile) {
+    .client-logo-card {
+      width: 80px;
+      height: 80px;
+      margin: $gap-sm * 0.5;
+
+      img {
+        max-height: 40px;
+        max-width: 64px;
+      }
+    }
+  }
+}

@@ -1,0 +1,259 @@
+﻿<!-- Contact -->
+<section class="contact-section" id="{{ site.data.sitetext.contact.section | default: 'contact' }}">
+  <div class="contact-container">
+
+    <!-- HERO -->
+    <div class="contact-hero">
+      <h1 class="contact-hero-heading">{{ site.data.sitetext.contact.title | default: "Contact Us" }}</h1>
+      <p class="contact-hero-subtext">{{ site.data.sitetext.contact.text | default: "We're here to help. First-time buyer or refinancing? We'll guide you through every step." }}</p>
+    </div>
+
+    <!-- MAIN GRID -->
+    <div class="contact-grid">
+
+      <!-- LEFT COLUMN -->
+      <div class="contact-left">
+
+        <!-- Office Hours Card -->
+        <div class="office-hours-card">
+          <span class="office-hours-decor" aria-hidden="true">
+            <i class="fas fa-clock"></i>
+          </span>
+          <h3 class="office-hours-heading">{{ site.data.sitetext.contact.office_hours.title | default: "Office Hours" }}</h3>
+          {% for line in site.data.sitetext.contact.office_hours.lines %}
+          <div class="office-hours-row">
+            {% assign parts = line | split: ":" %}
+            <div class="office-hours-icon">
+              {% if forloop.index == 1 %}
+                <i class="fas fa-calendar-check"></i>
+              {% elsif forloop.index == 2 %}
+                <i class="fas fa-calendar-xmark"></i>
+              {% else %}
+                <i class="fas fa-clock"></i>
+              {% endif %}
+            </div>
+            <div>
+              <span class="office-hours-label">{{ parts[0] }}</span>
+              <span class="office-hours-value">{{ parts[1] | remove_first: " " }}</span>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+        <!-- Quick Contact Actions -->
+        <div class="quick-actions">
+          <a href="tel:+27694430046" class="quick-action-tile">
+            <i class="fas fa-phone"></i>
+            <span>Call</span>
+          </a>
+          <a href="mailto:Info@solomoncapital.co.za?subject=Solomon Capital Website Enquiry" class="quick-action-tile">
+            <i class="fas fa-envelope"></i>
+            <span>Email</span>
+          </a>
+          <a href="https://wa.me/27694430046" target="_blank" rel="noopener noreferrer" class="quick-action-tile">
+            <i class="fab fa-whatsapp"></i>
+            <span>WhatsApp</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="contact-right">
+        <div class="contact-form-card">
+          <form id="contactForm" class="contact-form">
+
+            <!-- Honeypot -->
+            <div style="position:absolute;left:-9999px;" aria-hidden="true">
+              <label for="location">Location</label>
+              <input id="location" name="location" type="text" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <!-- Name row -->
+            <div class="form-row-2col">
+              <div class="form-field">
+                <label for="firstName">First Name <span class="req">*</span></label>
+                <input id="firstName" name="firstName" type="text" class="form-input" placeholder="Enter your first name" />
+                <span class="error-message" id="error-firstName"></span>
+              </div>
+              <div class="form-field">
+                <label for="lastName">Last Name <span class="req">*</span></label>
+                <input id="lastName" name="lastName" type="text" class="form-input" placeholder="Enter your last name" />
+                <span class="error-message" id="error-lastName"></span>
+              </div>
+            </div>
+
+            <!-- Email & Phone row -->
+            <div class="form-row-2col">
+              <div class="form-field">
+                <label for="emailAddress">Email Address <span class="req">*</span></label>
+                <input id="emailAddress" name="emailAddress" type="email" class="form-input" placeholder="name@example.com" />
+                <span class="error-message" id="error-emailAddress"></span>
+              </div>
+              <div class="form-field">
+                <label for="phoneNumber">Phone Number</label>
+                <input id="phoneNumber" name="phoneNumber" type="tel" class="form-input" placeholder="+27 82 000 0000" />
+              </div>
+            </div>
+
+            <!-- Message -->
+            <div class="form-field">
+              <label for="content">Message <span class="req">*</span></label>
+              <textarea id="content" name="content" rows="5" class="form-input form-textarea" placeholder="Tell us about your home loan needs — are you buying, building, or refinancing? What is your approximate property value and deposit?"></textarea>
+              <span class="error-message" id="error-content"></span>
+            </div>
+
+            <!-- Status messages -->
+            <div id="status-sent" class="status-message success" style="display:none;">
+              Thank you — your enquiry has been received. A consultant will be in touch shortly.
+            </div>
+            <div id="status-error" class="status-message error" style="display:none;">
+              Sorry, something went wrong. Please call us directly and we will assist you with your home loan application.
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" id="submitBtn" class="btn-submit">
+              <span>Submit Enquiry</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+
+            <p class="privacy-note">Your details are used solely to process your home loan pre-qualification and are never shared with third parties.</p>
+
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- End Contact -->
+
+<script>
+  (function () {
+    'use strict';
+
+    const form = document.getElementById('contactForm');
+    const API_URL = '{{ site.broadsheetApiUrl }}';
+    const submitBtn = document.getElementById('submitBtn');
+    const statusSent = document.getElementById('status-sent');
+    const statusError = document.getElementById('status-error');
+
+    const fields = {
+      firstName: document.getElementById('firstName'),
+      lastName: document.getElementById('lastName'),
+      emailAddress: document.getElementById('emailAddress'),
+      phoneNumber: document.getElementById('phoneNumber'),
+      location: document.getElementById('location'),
+      content: document.getElementById('content')
+    };
+
+    const errors = {
+      firstName: document.getElementById('error-firstName'),
+      lastName: document.getElementById('error-lastName'),
+      emailAddress: document.getElementById('error-emailAddress'),
+      content: document.getElementById('error-content')
+    };
+
+    function clearErrors() {
+      Object.keys(errors).forEach(function (key) {
+        errors[key].textContent = '';
+        if (fields[key]) fields[key].classList.remove('error');
+      });
+      statusSent.style.display = 'none';
+      statusError.style.display = 'none';
+    }
+
+    function setError(field, message) {
+      errors[field].textContent = message;
+      fields[field].classList.add('error');
+    }
+
+    function isValidEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    function validateForm() {
+      let isValid = true;
+      clearErrors();
+
+      if (!fields.firstName.value.trim()) { setError('firstName', 'First name is required'); isValid = false; }
+      if (!fields.lastName.value.trim()) { setError('lastName', 'Last name is required'); isValid = false; }
+
+      if (!fields.emailAddress.value.trim()) {
+        setError('emailAddress', 'Email address is required'); isValid = false;
+      } else if (!isValidEmail(fields.emailAddress.value)) {
+        setError('emailAddress', 'Please enter a valid email address'); isValid = false;
+      }
+
+      if (!fields.content.value.trim()) { setError('content', 'Message is required'); isValid = false; }
+
+      return isValid;
+    }
+
+    async function handleSubmit(e) {
+      e.preventDefault();
+      if (!validateForm()) return;
+
+      if (!API_URL) {
+        statusError.textContent = 'Contact form is not configured. Please call us directly for home loan assistance.';
+        statusError.style.display = 'block';
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.querySelector('span').textContent = 'Sending...';
+
+      try {
+        const body = {
+          name: fields.firstName.value.trim() + ' ' + fields.lastName.value.trim(),
+          emailAddress: fields.emailAddress.value.trim(),
+          phoneNumber: fields.phoneNumber.value.trim(),
+          location: fields.location.value,
+          content: fields.content.value.trim()
+        };
+
+        console.log('API_URL:', API_URL);
+        console.log('Request body:', body);
+
+        const response = await fetch(API_URL + '/v1/messages', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(body)
+        });
+
+        console.log('Response status:', response.status);
+        const responseText = await response.text();
+        console.log('Response body:', responseText);
+
+        if (!response.ok) throw new Error('Network error: ' + response.status + ' - ' + responseText);
+
+        form.reset();
+        clearErrors();
+        statusSent.style.display = 'block';
+        statusSent.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+      } catch (err) {
+        statusError.style.display = 'block';
+        statusError.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.querySelector('span').textContent = 'Submit Enquiry';
+      }
+    }
+
+    form.addEventListener('submit', handleSubmit);
+
+    Object.keys(fields).forEach(function (key) {
+      if (errors[key] && fields[key]) {
+        fields[key].addEventListener('input', function () {
+          if (this.value.trim() || (this.tagName === 'SELECT' && this.value)) {
+            errors[key].textContent = '';
+            this.classList.remove('error');
+          }
+        });
+      }
+    });
+
+  })();
+</script>

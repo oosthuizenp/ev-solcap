@@ -1,0 +1,16 @@
+{% assign holding_mode = site.holding_page.mode | default: "construction" %}
+{% assign holding_copy = site.data.sitetext.holding_page[holding_mode] | default: site.data.sitetext.holding_page.construction %}
+
+<main class="holding-page holding-page--{{ holding_mode }}">
+  <section class="holding-page__panel" aria-labelledby="holding-page-title">
+    {% if site.logo.path %}
+      <img class="holding-page__logo" src="{{ site.logo.path | relative_url }}" alt="{{ site.title | escape }}">
+    {% endif %}
+    <p class="holding-page__label">{{ holding_copy.label }}</p>
+    <h1 id="holding-page-title">{{ holding_copy.title }}</h1>
+    <p class="holding-page__text">{{ holding_copy.text }}</p>
+    {% if holding_copy.contact_text %}
+      <p class="holding-page__contact">{{ holding_copy.contact_text }}</p>
+    {% endif %}
+  </section>
+</main>

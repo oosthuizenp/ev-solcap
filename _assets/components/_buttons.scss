@@ -1,0 +1,68 @@
+// ── Global Button Styles ────────────────────────────────
+// Single source of truth for all buttons across the site.
+
+.btn {
+  @include heading-font;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50px;
+  padding: 0.75rem 1.75rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+// ── Sizes ──
+.btn-xl {
+  padding: 0.85rem 2rem;
+  font-size: 1rem;
+}
+
+// ── Variants ──
+.btn-primary {
+  background-color: $primary;
+  color: $white;
+  border-color: $primary;
+
+  &:hover {
+    background-color: darken($primary, 10%);
+    border-color: darken($primary, 10%);
+    color: $white;
+  }
+}
+
+.btn-outline-primary {
+  background-color: transparent;
+  color: $primary;
+  border-color: $primary;
+
+  &:hover {
+    background-color: $primary;
+    color: $white;
+  }
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: $primary;
+  border-color: $primary;
+
+  &:hover {
+    background-color: rgba($primary, 0.07);
+    color: darken($primary, 10%);
+  }
+}

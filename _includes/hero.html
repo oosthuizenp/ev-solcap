@@ -1,0 +1,43 @@
+﻿<!-- 
+ hero.html 
+ -->
+<header class="hero" id="{{ site.data.sitetext.about.section | default: 'hero' }}" aria-label="Hero Section">
+  <div class="container">
+    <div class="hero-content">
+
+      <!-- LEFT: Text -->
+      <div class="hero-text-container">
+        {%- if site.data.sitetext.header.title -%}
+          <h1 class="section-heading">{{ site.data.sitetext.header.title }}</h1>
+        {%- endif -%}
+
+        {%- if site.data.sitetext.header.text -%}
+          <p class="hero-subheading">{{ site.data.sitetext.header.text }}</p>
+        {%- endif -%}
+
+        {%- if site.data.sitetext.header.highlights -%}
+        <div class="hero-highlights">
+          {%- for item in site.data.sitetext.header.highlights -%}
+            <div class="highlight-item">
+              <i class="{{ item.icon }}"></i>
+              <span>{{ item.title }}</span>
+            </div>
+            {%- unless forloop.last -%}
+              <span class="highlight-divider"></span>
+            {%- endunless -%}
+          {%- endfor -%}
+        </div>
+        {%- endif -%}
+
+        <div class="hero-buttons">
+          <a class="btn btn-primary js-scroll-trigger" href="/contact/">Start a home-loan enquiry</a>
+          <!-- <a class="btn btn-outline js-scroll-trigger" href="/contact">Apply for a bond</a> -->
+        </div>
+      </div>
+
+      <!-- RIGHT: Image -->
+      <div class="hero-image-container" role="img" aria-label="Solomon Capital team"></div>
+
+    </div>
+  </div>
+</header>

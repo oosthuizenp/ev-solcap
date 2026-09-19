@@ -1,0 +1,44 @@
+baseurl: ""
+url: https://solomoncapital.co.za
+
+title: Solomon Capital
+email: Info@solomoncapital.co.za
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Solomon Capital provides professional financial services and home loan assistance.
+author: E.Roux / P.Oosthuizen
+
+
+collections:
+  portfolio:
+
+markdown: kramdown
+
+webserver_headers:
+  - - Access-Control-Allow-Origin
+    - "*"
+  - - Access-Control-Allow-Methods
+    - GET, OPTIONS, HEAD
+
+logo:
+  path: /assets/img/logo/solomon-capital-logo.png
+  alt: /assets/img/logo/solomon-capital-logo-bw.png
+
+exclude: [node_modules, webpack-config.js, package.json, package-lock.json]
+
+group: evo Home Loans
+powered_by_url: https://evohomeloans.co.za
+
+company: Solomon Capital
+
+holding_page:
+  enabled: false
+  mode: unavailable # construction or unavailable
+
+contact:
+  phone: +27 69 443 0046
+  email: Info@solomoncapital.co.za
+  whatsapp: +27694430046
+  whatsapp_message: Hi,I%20would%20like%20to%20chat%20about%20a%20homeloan.
+
+address: Durban
+
+broadsheetApiUrl: https://api.broadsheet.intellify.co.za

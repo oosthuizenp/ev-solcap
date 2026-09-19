@@ -1,0 +1,119 @@
+bond:
+  eyebrow: "Monthly payment check"
+  title: "Bond Repayment Calculator"
+  summary: "See what a home loan could cost you each month before you fall in love with a property."
+  intro: "Type in the home price, deposit, interest rate, and loan term. The calculator gives you a quick monthly repayment estimate so you can see if the number feels comfortable."
+  goal: "This page helps you answer one simple question: if I buy at this price, what might I pay the bank every month?"
+  highlights:
+    - "Estimate your monthly bond payment."
+    - "Test different deposits and interest rates."
+    - "Plan your budget before you apply."
+  faqs:
+    - question: "What does a bond repayment calculator show me?"
+      answer: "It estimates your monthly home loan payment. It uses the loan amount, interest rate, and repayment term to give you a planning number."
+    - question: "Is this the exact amount the bank will charge?"
+      answer: "No. It is an estimate. Your final repayment depends on the rate the bank offers you, fees, insurance, and the exact loan terms."
+    - question: "Why should I change the interest rate?"
+      answer: "A small rate change can make a big difference over many years. Try a few rates so you know what still feels affordable."
+    - question: "What should I do after using it?"
+      answer: "If the payment looks workable, speak to us about pre-approval. We can help you see what the banks may offer."
+
+affordability:
+  eyebrow: "Can I afford it?"
+  title: "Bond Affordability Calculator"
+  summary: "Work out a rough price range before you start viewing homes."
+  intro: "Add your income, expenses, and loan details. The calculator gives you an estimate of how much you may be able to borrow."
+  goal: "This page helps you avoid guessing. It gives you a starting point for what price range may suit your budget."
+  highlights:
+    - "Check a possible loan amount."
+    - "See how expenses affect affordability."
+    - "Shop for homes with more confidence."
+  faqs:
+    - question: "What does affordability mean?"
+      answer: "Affordability is the amount a bank may feel you can repay each month after looking at your income, expenses, credit profile, and other debts."
+    - question: "Does the calculator guarantee approval?"
+      answer: "No. It is only a guide. A bank still needs to check your documents, credit record, and full application."
+    - question: "Why do expenses matter so much?"
+      answer: "The bank wants to see what money is left after your normal monthly costs. Lower debt and steady income usually help."
+    - question: "When should I use this calculator?"
+      answer: "Use it before you view homes or make an offer. It helps you focus on properties that match your budget."
+
+transfer:
+  eyebrow: "Upfront buying costs"
+  title: "Transfer Cost Calculator"
+  summary: "See the extra once-off costs that come with buying a home."
+  intro: "A home purchase is more than the selling price. This calculator estimates transfer costs, bond registration costs, and related fees."
+  goal: "This page helps you plan the cash you may need before registration, so the once-off costs do not surprise you."
+  highlights:
+    - "Estimate transfer and registration costs."
+    - "Plan cash needed on top of your deposit."
+    - "Understand the fees before you sign."
+  faqs:
+    - question: "What are transfer costs?"
+      answer: "Transfer costs are once-off costs paid to move the property into your name. They can include transfer duty, conveyancing fees, Deeds Office fees, and smaller admin costs."
+    - question: "Are transfer costs the same as my deposit?"
+      answer: "No. Your deposit lowers the bond amount. Transfer costs are separate buying costs and are usually paid before registration."
+    - question: "What are bond registration costs?"
+      answer: "These are costs linked to registering the home loan over the property. They are separate from the transfer attorney costs."
+    - question: "Can the final amount change?"
+      answer: "Yes. The calculator gives an estimate. Your conveyancer and bond attorney must confirm the final amounts."
+
+deposit:
+  eyebrow: "Save for the start"
+  title: "Deposit Savings Calculator"
+  summary: "Work out how much to save and how long it may take to reach your deposit goal."
+  intro: "Add your target deposit, your current savings, and what you can save each month. The calculator shows how your plan may look."
+  goal: "This page helps you turn a big deposit goal into a monthly savings plan."
+  highlights:
+    - "Set a clear deposit target."
+    - "See how monthly savings add up."
+    - "Build a plan before you apply."
+  faqs:
+    - question: "Why does a deposit help?"
+      answer: "A deposit lowers the amount you need to borrow. That can lower your monthly payment and may help your application look stronger."
+    - question: "Do I always need a deposit?"
+      answer: "Not always. Some buyers may qualify for a high or full bond, but a deposit can still make the numbers easier."
+    - question: "What should I include in my savings goal?"
+      answer: "Plan for your deposit and also remember the other once-off buying costs, like transfer and bond registration costs."
+    - question: "What if I cannot save a big deposit yet?"
+      answer: "Start with a smaller monthly goal and check your affordability. We can help you understand which options may still be possible."
+
+additional:
+  eyebrow: "Pay a little extra"
+  title: "Extra Repayment Calculator"
+  summary: "See how paying more into your bond may save interest and shorten the loan."
+  intro: "Add your loan details and an extra monthly payment. The calculator shows how that extra amount could change the total interest and time left."
+  goal: "This page helps you see the long-term effect of small extra payments."
+  highlights:
+    - "Test an extra monthly payment."
+    - "Estimate possible interest savings."
+    - "See how the loan term could shrink."
+  faqs:
+    - question: "Why do extra payments help?"
+      answer: "Extra payments can reduce the loan balance faster. When the balance drops faster, less interest may build up over time."
+    - question: "Does even a small extra amount matter?"
+      answer: "Yes, it can. A small monthly extra payment may add up over a long home loan term."
+    - question: "Can I access extra money I paid in?"
+      answer: "That depends on your home loan type and bank rules. Ask your bank before relying on access to extra funds."
+    - question: "Should I pay extra before checking other debt?"
+      answer: "Not always. It is smart to compare your bond rate with other debt rates and keep emergency savings."
+
+amortisation:
+  eyebrow: "See the loan over time"
+  title: "Home Loan Amortisation Calculator"
+  summary: "Understand how each payment slowly moves from mostly interest to more capital."
+  intro: "A home loan changes month by month. This calculator shows how the balance, interest, and capital payment can change over the life of the loan."
+  goal: "This page helps you see the full journey of the loan, not only the first monthly payment."
+  highlights:
+    - "See interest and capital split."
+    - "Track the balance over time."
+    - "Compare the effect of extra payments."
+  faqs:
+    - question: "What does amortisation mean?"
+      answer: "It means paying off a loan bit by bit over time. Each payment usually covers interest and also pays down part of the loan."
+    - question: "Why is the interest higher at the start?"
+      answer: "At the start, the loan balance is still high. Interest is charged on that balance, so a bigger part of the payment goes to interest."
+    - question: "Why look at the full schedule?"
+      answer: "It helps you see the long-term cost of the loan and how extra payments could change the picture."
+    - question: "Can the schedule change?"
+      answer: "Yes. Interest rate changes, extra payments, missed payments, or changes to the loan can all change the schedule."

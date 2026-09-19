@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body id="page-top">
+
+  {% if site.holding_page.enabled %}
+    {% include holding-page.html %}
+  {% else %}
+    {{ content }}
+
+    {% include footer.html %}
+  {% endif %}
+
+</body>
+
+</html>

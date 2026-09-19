@@ -1,0 +1,37 @@
+---
+layout: page
+title: Page Not Found
+description: The page you requested could not be found. Return to Solomon Capital or explore our home loan calculators and services.
+robots: noindex, follow
+background: grey
+permalink: /404.html
+---
+
+<main class="error-page" aria-labelledby="error-title">
+  <div class="error-page__glow" aria-hidden="true"></div>
+
+  <div class="error-page__content">
+    <p class="error-page__eyebrow">Well, this address came up short</p>
+    <div class="error-page__code" aria-hidden="true">404</div>
+    <h1 id="error-title">This page has moved or no longer exists.</h1>
+    <p class="error-page__message">
+      No paperwork, no panic. Let’s get you back to the useful part of your home-finance journey.
+    </p>
+
+    <div class="error-page__actions">
+      <a class="btn btn-primary btn-xl" href="{{ '/' | relative_url }}">
+        <i class="fas fa-home" aria-hidden="true"></i> Back to home
+      </a>
+      <a class="btn btn-outline-primary btn-xl" href="{{ '/contact' | relative_url }}">
+        Contact our team
+      </a>
+    </div>
+
+    <nav class="error-page__links" aria-label="Helpful links">
+      <span>Or try:</span>
+      <a href="{{ '/bond-calculator' | relative_url }}">Bond calculator</a>
+      <a href="{{ '/affordability-calculator' | relative_url }}">Affordability calculator</a>
+      <a href="{{ '/about' | relative_url }}">About us</a>
+    </nav>
+  </div>
+</main>

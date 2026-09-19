@@ -1,0 +1,71 @@
+.contact-strip {
+  display: none;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #a19e9e;
+  font-size: 13px;
+  height: 40px;
+  max-height: 40px;
+  overflow: hidden;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .25s ease;
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // equal columns
+    align-items: center;
+    height: 100%;
+    padding: 0 1rem;
+    text-align: center; // ensures text centered inside each column
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center; // center inside each grid column
+    align-items: center;
+    height: 100%;
+  }
+
+  &__phone,
+  &__email,
+  &__whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    color: #002d78;
+    text-decoration: none;
+    font-weight: 500;
+    height: 100%;
+    padding: 0 .5rem;
+    transition: color .2s ease, background-color .2s ease;
+
+    &:hover {
+      color: #0057ff;
+      background-color: rgba(0,0,0,0.03);
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+  }
+}
+
+
+/* show only on ≥900px */
+@media (min-width: 900px) {
+  .contact-strip {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+}

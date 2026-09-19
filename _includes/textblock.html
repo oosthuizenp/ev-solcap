@@ -1,0 +1,52 @@
+<!-- Text-Block | WHY US-->
+<section class="bg-light page-section py-5 wave-container" id="{{ site.data.sitetext.textblock.section | default: 'textblock' }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="text-center">{{ site.data.sitetext.textblock.title }}</h2>
+        
+        {% assign textblock_intro = site.data.sitetext.textblock.text | default: "" | strip %}
+        {% if textblock_intro.size > 0 %}
+          <h2 class="text-center">{{ site.data.sitetext.textblock.text }}</h2>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-1 text-center"></div>
+      <div class="col-lg-10 text-left">
+        <div class="container ">
+          {% for textblock in site.data.sitetext.textblock.list %}
+          <div class="row align-items-center">
+            {% if textblock.image %}
+            <div class="textblock-image col-1 p-1 text-center">
+              <i class="{{textblock.image}} fa-1x"></i>
+            </div>
+            {% endif %}
+            <div class="textblock-title col text-left">
+              <p>{{ textblock.title }}</p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <br>
+        
+        {% if site.data.sitetext.textblock.footer %}
+        <div class="text-center w-100">
+          {{ site.data.sitetext.textblock.footer | markdownify }}
+        </div>
+        {% endif %}
+        <div class="textblock-buttons">
+          <a class="btn btn-primary btn-xl" href="/contact/">Start a home-loan enquiry</a>
+          <!-- <a class="btn btn-outline" href="/contact">Get pre-approved</a> -->
+        </div>
+        
+      </div>
+      <div class="col-lg-1 text-center"></div>
+      
+    </div>
+    
+  </div>
+  
+</section>
+<!-- End Text-Block -->

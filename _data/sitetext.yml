@@ -1,0 +1,269 @@
+﻿header:
+  title: "Home Loan and Bond Origination Help in Durban"
+  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Solomon Capital provides comprehensive financial solutions to help you achieve your property goals."
+  highlights:
+    - title: "Bond Origination"
+      icon: "fas fa-home"
+    - title: "Pre-qualification Guidance"
+      icon: "fas fa-tasks"
+    - title: "Refinancing Enquiries"
+      icon: "fas fa-exchange-alt"
+
+holding_page:
+  construction:
+    label: "Coming Soon"
+    title: "Site coming soon"
+    text: "We are getting everything ready. Please check back shortly."
+    contact_text: "For urgent enquiries, contact us at Info@solomoncapital.co.za."
+  unavailable:
+    label: "Offline..."
+    title: "Site temporarily unavailable"
+    text: "This website is currently offline."
+    contact_text: ""
+
+expert:
+  title: "Buy with Confidence"
+  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt."
+  button 1 text: ""
+  button 2 text: ""
+
+nocharge:
+  title: "No Charge for our Service"
+  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+  button 1 text: ""
+  button 2 text: ""
+
+services:
+  title: "Home Loan Services"
+  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Solomon Capital assists clients with tailored financial solutions across South Africa."
+  section: services
+  list:
+    - title: "Pre-qualification guidance"
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+      icon: fas fa-tasks
+      link:
+        url: /contact/
+        text: "Request pre-qualification help"
+    - title: "Bond origination"
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate."
+      icon: fas fa-home
+      link:
+        url: /contact/
+        text: "Start a bond enquiry"
+    - title: "Refinancing and switch enquiries"
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident."
+      icon: fas fa-exchange-alt
+      link:
+        url: /contact/
+        text: "Ask about refinancing"
+
+articles:
+  title: "Articles"
+  text: ""
+  section: articles
+
+calculators:
+  title: "Home Loan Calculators"
+  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Solomon Capital provides calculators to help you estimate your financial options."
+  section: calculators
+  list:
+    - title: "Affordability Calculator"
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      icon: fas fa-calculator
+      link:
+        url: /affordability-calculator/
+        text: "Estimate affordability"
+    - title: "Bond Repayment Calculator"
+      desc: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      icon: fas fa-calculator
+      link:
+        url: /bond-calculator/
+        text: "Estimate repayments"
+    - title: "Transfer Cost Calculator"
+      desc: "Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+      icon: fas fa-calculator
+      link:
+        url: /transfer-cost-calculator/
+        text: "Estimate costs"
+
+more-calculators:
+  title: "More Calculators"
+  section: more-calculators
+  list:
+    - title: "Amortisation Calculator"
+      desc: "Lorem ipsum dolor sit amet."
+      icon: fas fa-calculator
+      link:
+        url: /amortisation-calculator/
+        text: "View amortisation"
+    - title: "Deposit Savings Calculator"
+      desc: "Sed do eiusmod tempor incididunt."
+      icon: fas fa-calculator
+      link:
+        url: /deposit-savings-calculator/
+        text: "Plan a deposit"
+    - title: "Additional Payment Calculator"
+      desc: "Ut enim ad minim veniam, quis nostrud."
+      icon: fas fa-calculator
+      link:
+        url: /additional-payment-calculator/
+        text: "Estimate savings"
+
+textblock:
+  title: "How the Bond Application Process Works"
+  text: ""
+  footer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor."
+  section: textblock
+  list:
+    - title: "<strong>Plan</strong> - Ask for pre-qualification guidance before you make an offer."
+      image: "fas fa-circle"
+    - title: "<strong>Decide</strong> - Find a property and sign an Offer to Purchase when you are ready."
+      image: "fas fa-circle"
+    - title: "<strong>Prepare</strong> - Gather identity, income, bank statement and property documents required by lenders."
+      image: "fas fa-circle"
+    - title: "<strong>Apply</strong> - We submit your application to relevant banks for assessment."
+      image: "fas fa-circle"
+    - title: "<strong>Compare offers</strong> - We help you understand rate, repayment and condition differences."
+      image: "fas fa-circle"
+    - title: "<strong>You choose</strong> - Select the home-loan offer that fits your needs, subject to lender terms."
+      image: "fas fa-circle"
+
+portfolio:
+  title: "Other Services"
+  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  section: portfolio
+  closebutton: "Close"
+
+about:
+  title: "About Solomon Capital"
+      text2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Solomon Capital is a professional financial services provider.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.<br><br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum."
+  text3: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+
+clients:
+  title: "We Submit Applications to Major South African Banks"
+  title2: "Experienced, Knowledgeable & Dedicated to Customer Service"
+  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  section: clients
+  max-height: 120px
+  horizontal-scrolling: ""
+  list:
+    - title: "ABSA"
+      url: https://www.absa.co.za
+      logo: assets/img/clients/absa-bw.png
+    - title: "FNB"
+      url: https://www.fnb.co.za/
+      logo: assets/img/clients/fnb-n.png
+    - title: "Housing Investment Partners"
+      url: https://www.hiphousing.co.za/
+      logo: assets/img/clients/hip.jpg
+    - title: "Investec"
+      url: https://www.investec.co.za/
+      logo: assets/img/clients/investec.png
+    - title: "Nedbank"
+      url: https://www.nedbank.co.za
+      logo: assets/img/clients/nedbank-bw.png
+    - title: "Rand Merchant Bank"
+      url: https://www.rmb.co.za
+      logo: assets/img/clients/rmb-img-n.png
+    - title: "Standard Bank"
+      url: https://www.standardbank.co.za/
+      logo: assets/img/clients/SBSA-bw.png
+    - title: "Sentinal Homes"
+      url: https://www.sentinelhomes.co.za/
+      logo: assets/img/clients/sentinal-homes.png
+
+experienced:
+  title: "Clear Guidance Before You Apply"
+  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+
+team:
+  title: "The Team"
+  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  section: team
+  people:
+    - name: "Office Hours"
+      role: ""
+      image: assets/img/team/office-hours.png
+      bio: "Mon to Fri: 9 AM to 5 PM<br>Sat, Sun & Public Holidays: Closed<br>Need urgent assistance after hours? Contact Sihle Ndlela directly on +27 69 443 0046."
+      social:
+        - url: tel:+27694430046
+          icon: fas fa-phone
+        - url: mailto:Info@solomoncapital.co.za?subject=Solomon Capital Website Enquiry
+          icon: fas fa-envelope
+        - url: https://wa.me/+27694430046
+          icon: fab fa-whatsapp
+    - name: "Sihle<br>Ndlela"
+      role: "Primary Contact"
+      image: assets/img/team/eveshan-profile.png
+      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      social:
+        - url: tel:+27694430046
+          icon: fas fa-phone
+        - url: mailto:Info@solomoncapital.co.za?subject=Solomon Capital Website Enquiry
+          icon: fas fa-envelope
+        - url: https://wa.me/+27694430046
+          icon: fab fa-whatsapp
+    - name: "Venetia<br>Murugan"
+      role: "Operations and Sales Support"
+      image: assets/img/team/venitia-profile.png
+      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      social:
+        - url: tel:+27694430046
+          icon: fas fa-phone
+        - url: mailto:Info@solomoncapital.co.za?subject=Solomon Capital Website Enquiry
+          icon: fas fa-envelope
+        - url: https://wa.me/+27694430046
+          icon: fab fa-whatsapp
+    - name: "Kaylene<br>Ramgarib"
+      role: "Bond Consultant"
+      image: assets/img/team/kaylene-profile.png
+      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      social:
+        - url: tel:+27628750066
+          icon: fas fa-phone
+        - url: mailto:Info@solomoncapital.co.za?subject=Solomon Capital Website Enquiry
+          icon: fas fa-envelope
+        - url: https://wa.me/+27628750066
+          icon: fab fa-whatsapp
+
+faq:
+  title: "Home Loan Questions"
+  text: "Straight answers to common bond application questions."
+  section: home-loan-faq
+  list:
+    - question: "How does home-loan pre-qualification work?"
+      answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    - question: "What documents are usually needed for a bond application?"
+      answer: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
+    - question: "How long does bond approval take?"
+      answer: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum."
+    - question: "Can self-employed applicants qualify for a home loan?"
+      answer: "Excepteur sint occaecat cupidatat non proident, sunt in culpa."
+    - question: "Does making an enquiry guarantee approval?"
+      answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    - question: "Is Solomon Capital a lender?"
+      answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Solomon Capital is a bond origination service."
+
+testimonials:
+  title: "TESTIMONIALS"
+  text: ""
+  section: testimonials
+  people: []
+
+contact:
+  title: "Get in Touch"
+  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  section: contact
+  office_hours:
+    title: "Office Hours"
+    lines:
+      - "OPEN : 9 AM - 5 PM, MON to FRI"
+      - "CLOSED : Sat, Sun & Public Holidays"
+
+footer:
+  legal: "Powered by evo Home Loans"
+  social:
+    - url: https://www.instagram.com/solomoncapital
+      icon: "fab fa-instagram"
+    - url: https://www.tiktok.com/@solomoncapital
+      icon: "fab fa-tiktok"

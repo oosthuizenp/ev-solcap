@@ -1,0 +1,202 @@
+// ======================================================
+// layout/_hero.scss
+// ======================================================
+
+header.hero {
+  color: $gray-900;
+  background-color: $gray-100;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: calc(#{$gap-xl} + 70px) 0 $gap-xl 0;
+  position: relative;
+  overflow: hidden;
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $gr-2;
+  }
+
+  // ── Two-column layout ────────────────────────────────
+  .hero-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;        // Keeps image and text on one line
+    align-items: center;
+    gap: $gr-3;
+  }
+
+  // ── Left: Text ───────────────────────────────────────
+  .hero-text-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: $gap-md 0;
+    text-align: left;
+    z-index: 2;
+  }
+
+  .section-heading {
+    @include heading-font;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: $gray-900;
+    margin-bottom: $gap-md;
+    text-transform: none;     // REMOVES ALL CAPS
+  }
+
+  .hero-subheading {
+    @include body-font;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: $gray-700;
+    margin-bottom: $gap-lg;
+    max-width: 480px;
+  }
+
+  .hero-highlights {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: $gap-lg;
+    flex-wrap: wrap;
+
+    .highlight-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #002d62;
+      @include heading-font;
+
+      i {
+        color: $primary;
+        font-size: 1.1rem;
+      }
+    }
+
+    .highlight-divider {
+      width: 4px;
+      height: 4px;
+      background-color: $gray-300;
+      border-radius: 50%;
+    }
+  }
+
+  // ── Buttons ──────────────────────────────────────────
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap-sm;
+  justify-content: flex-start;
+
+  .btn {
+    width: 150px;
+  }
+}
+
+  // ── Right: Image & Background Card ───────────────────
+  .hero-image-container {
+    flex: 0 0 420px;
+    width: 420px;
+    height: 420px;
+    border-radius: 24px;
+    position: relative;
+
+    // This creates a new stacking context so the card stays
+    // behind the image but doesn't disappear into the page background
+    isolation: isolate;
+
+    // VISIBLE allows the offset card to show outside the bounds
+    overflow: visible;
+
+    // The Tilt
+    transform: rotate(6deg);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    margin: $gap-lg $gap-lg $gap-lg 0;
+
+    // ── THE IMAGE LAYER ──
+    // We use a pseudo-element for the image itself to ensure
+    // it sits ON TOP of the primary colored card.
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url("/assets/img/hero/hero-box.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 24px;
+      box-shadow: $shadow-lg;
+      z-index: 2; // Image is on top
+    }
+
+    // ── THE OFFSET CARD LAYER ──
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: $primary;
+      border-radius: 24px;
+      z-index: 1; // Card is behind the image (z-index 2)
+
+      // Offset by 5 degrees relative to parent
+      transform: rotate(-5deg);
+      transition: transform 0.4s ease;
+    }
+
+    &:hover {
+      transform: rotate(3deg) scale(1.02);
+      &::before {
+        transform: rotate(-2deg);
+      }
+    }
+  }
+
+  // ── Tablet / Mobile Logic ────────────────────────────
+    @media (max-width: 992px) {
+    padding: 0 0 $gap-lg 0;
+    overflow: visible;
+    margin-top: 0px;
+
+    .container {
+      padding: 0;
+    }
+
+    .hero-content {
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: $gap-lg;
+    }
+
+    .hero-image-container {
+      order: 1;
+      flex: none;
+      width: 100vw;
+      height: 380px;
+      margin: 0;
+      transform: none;
+
+      &::after {
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+
+    .hero-text-container {
+      order: 2;
+      width: 100%;
+      padding: 0 $gap-md;
+    }
+  }
+}

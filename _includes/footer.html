@@ -1,0 +1,118 @@
+﻿<footer id="footer">
+  <div class="container">
+    <div class="footer-content">
+  <!-- Brand -->
+  <div class="footer-brand">
+    <a href="{{ site.baseurl }}/" class="logo">
+      {% if site.logo %}
+        <img src="{{ site.logo.alt }}" alt="{{ site.title }}">
+      {% else %}
+        <span class="site-title">{{ site.title }}</span>
+      {% endif %}
+    </a>
+  </div>
+
+  <!-- Quick Links -->
+  <div class="footer-links">
+    <h5>Quick Links</h5>
+    <ul>
+      {%- for link in site.data.navigation.nav -%}
+      <li>
+        {%- if link.url -%}
+          <a href="{{ link.url }}">{{ link.title }}</a>
+        {%- elsif link.section -%}
+          <a href="{{ site.baseurl }}/#{{ link.section }}">{{ link.title }}</a>
+        {%- else -%}
+          <a href="#">{{ link.title }}</a>
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+
+  <!-- Company Links -->
+  <div class="footer-links">
+    <h5>Company</h5>
+    <ul>
+      <li><a href="/privacy-statement/">Privacy Statement</a></li>
+      <li><a href="/data-sharing-agreement/">Data Sharing</a></li>
+      <li><a href="/legal/">Privacy Policy</a></li>
+    </ul>
+  </div>
+
+  <!-- Contact -->
+  <div class="footer-contact">
+    <h5>Get in Touch</h5>
+
+    <!-- Phone -->
+    <div class="contact-item">
+      <div class="icon"><i class="fas fa-phone" aria-hidden="true"></i></div>
+      <div class="info">
+        <a href="tel:{{ site.contact.phone | remove: ' ' }}">
+          {{ site.contact.phone }}
+        </a>
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="contact-item">
+      <div class="icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
+      <div class="info">
+        <a href="mailto:{{ site.contact.email }}">
+          {{ site.contact.email }}
+        </a>
+      </div>
+    </div>
+
+    <!-- Social -->
+    <div class="social-icons">
+
+      <a href="https://www.instagram.com/solomoncapital"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+
+      <a href="https://www.tiktok.com/@solomoncapital"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="TikTok">
+        <i class="fab fa-tiktok"></i>
+      </a>
+
+      <a href="https://api.whatsapp.com/send?phone={{ site.contact.whatsapp }}&text={{ site.contact.whatsapp_message }}"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- Floating WhatsApp -->
+<div class="whatsapp-float">
+  <a href="https://api.whatsapp.com/send?phone={{ site.contact.whatsapp }}&text={{ site.contact.whatsapp_message }}"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="tooltip">Chat with us</span>
+  </a>
+</div>
+
+<!-- Footer Bottom -->
+<div class="footer-bottom">
+  <div class="footer-bottom-grid">
+    <span>&copy; {{ 'now' | date: "%Y" }} {{ site.company }}. All rights reserved.</span>
+    <span>Powered by <a href="https://evohomeloans.co.za">evohomeloans.co.za</a></span>
+    <span>Website by <a href="https://intellify.co.za">Intellify.co.za</a></span>
+  </div>
+</div>
+
+  </div>
+
+</footer>
