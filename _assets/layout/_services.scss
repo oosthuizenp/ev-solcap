@@ -32,7 +32,8 @@
     transition: background-color 0.3s ease, transform 0.2s ease;
 
     &:hover {
-      background-color: $primary; // Example hover color
+      background-color: darken($secondary, 10%);
+      color: $white;
       transform: translateY(-2px);
     }
 

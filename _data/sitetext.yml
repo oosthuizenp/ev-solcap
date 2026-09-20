@@ -1,14 +1,6 @@
 ﻿header:
   title: "Home Loan and Bond Origination Help in Durban"
   text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Solomon Capital provides comprehensive financial solutions to help you achieve your property goals."
-  highlights:
-    - title: "Bond Origination"
-      icon: "fas fa-home"
-    - title: "Pre-qualification Guidance"
-      icon: "fas fa-tasks"
-    - title: "Refinancing Enquiries"
-      icon: "fas fa-exchange-alt"
-
 holding_page:
   construction:
     label: "Coming Soon"
@@ -91,19 +83,19 @@ more-calculators:
   section: more-calculators
   list:
     - title: "Amortisation Calculator"
-      desc: "Lorem ipsum dolor sit amet."
+      desc: "See how your loan balance reduces over time."
       icon: fas fa-calculator
       link:
         url: /amortisation-calculator/
         text: "View amortisation"
     - title: "Deposit Savings Calculator"
-      desc: "Sed do eiusmod tempor incididunt."
+      desc: "Work out how long it may take to save your deposit."
       icon: fas fa-calculator
       link:
         url: /deposit-savings-calculator/
         text: "Plan a deposit"
     - title: "Additional Payment Calculator"
-      desc: "Ut enim ad minim veniam, quis nostrud."
+      desc: "See what paying a bit extra could save you."
       icon: fas fa-calculator
       link:
         url: /additional-payment-calculator/
@@ -136,13 +128,13 @@ portfolio:
 
 about:
   title: "About Solomon Capital"
-      text2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Solomon Capital is a professional financial services provider.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.<br><br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum."
+  text2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Solomon Capital is a professional financial services provider.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.<br><br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum."
   text3: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 
 clients:
   title: "We Submit Applications to Major South African Banks"
   title2: "Experienced, Knowledgeable & Dedicated to Customer Service"
-  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  text: "We send your home-loan application to leading South African banks, helping you compare offers and choose the option that fits best."
   section: clients
   max-height: 120px
   horizontal-scrolling: ""
@@ -203,28 +195,7 @@ team:
           icon: fas fa-envelope
         - url: https://wa.me/+27694430046
           icon: fab fa-whatsapp
-    - name: "Venetia<br>Murugan"
-      role: "Operations and Sales Support"
-      image: assets/img/team/venitia-profile.png
-      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-      social:
-        - url: tel:+27694430046
-          icon: fas fa-phone
-        - url: mailto:Info@solomoncapital.co.za?subject=Solomon Capital Website Enquiry
-          icon: fas fa-envelope
-        - url: https://wa.me/+27694430046
-          icon: fab fa-whatsapp
-    - name: "Kaylene<br>Ramgarib"
-      role: "Bond Consultant"
-      image: assets/img/team/kaylene-profile.png
-      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-      social:
-        - url: tel:+27628750066
-          icon: fas fa-phone
-        - url: mailto:Info@solomoncapital.co.za?subject=Solomon Capital Website Enquiry
-          icon: fas fa-envelope
-        - url: https://wa.me/+27628750066
-          icon: fab fa-whatsapp
+
 
 faq:
   title: "Home Loan Questions"

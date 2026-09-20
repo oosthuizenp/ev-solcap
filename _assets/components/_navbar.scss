@@ -12,11 +12,9 @@ $gr-4: 4.236rem;    // 68px
 $gr-5: 6.572rem;    // 136px
 
 #mainNav {
-  background-color: $white;
-  padding: 0 $gr-2;
-  height: $gr-5;
-  display: flex;
-  align-items: center;
+  background-color: $primary;
+  padding: 0 1.618rem;
+  height: 6.572rem;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
   transition: all 0.35s ease;
   position: relative;
@@ -42,7 +40,7 @@ $gr-5: 6.572rem;    // 136px
   // ── Brand ──────────────────────────────────────────
   .navbar-brand {
     @include heading-font;
-    color: $primary;
+    color: $white;
     font-size: 1.4rem;
     font-weight: 700;
     letter-spacing: -0.02em;
@@ -56,7 +54,7 @@ $gr-5: 6.572rem;    // 136px
 
     &:hover {
       opacity: 0.82;
-      color: darken($primary, 10%);
+      color: $secondary;
     }
 
     img {
@@ -75,8 +73,8 @@ $gr-5: 6.572rem;    // 136px
     letter-spacing: 0.08em;
     text-transform: uppercase;
     padding: 0.45rem $gr-1;
-    color: $white;
-    background-color: $primary;
+    color: $primary;
+    background-color: $secondary;
     border: none;
     border-radius: 2px;
     display: flex;
@@ -87,12 +85,12 @@ $gr-5: 6.572rem;    // 136px
     margin-left: auto;
 
     &:hover {
-      background-color: darken($primary, 10%);
+      background-color: darken($secondary, 10%);
       transform: translateY(-1px);
     }
 
     &:focus {
-      outline: 2px solid $primary;
+      outline: 2px solid $secondary;
       outline-offset: 2px;
       box-shadow: none;
     }
@@ -116,7 +114,7 @@ $gr-5: 6.572rem;    // 136px
         font-size: 0.95rem;
         font-weight: 500;
         letter-spacing: 0.03em;
-        color: $gray-800;
+        color: rgba($white, 0.9);
         padding: 0.5rem $gr-1;
         border-radius: 2px;
         text-decoration: none;
@@ -132,7 +130,7 @@ $gr-5: 6.572rem;    // 136px
           left: $gr-1;
           right: $gr-1;
           height: 2px;
-          background-color: $primary;
+          background-color: $secondary;
           transform: scaleX(0);
           transform-origin: left center;
           transition: transform 0.25s ease;
@@ -140,8 +138,8 @@ $gr-5: 6.572rem;    // 136px
 
         &:hover,
         &.active {
-          color: $primary;
-          background-color: rgba($primary, 0.06);
+          color: $secondary;
+          background-color: rgba($secondary, 0.08);
 
           &::after {
             transform: scaleX(1);
@@ -189,10 +187,11 @@ $gr-5: 6.572rem;    // 136px
 
     .navbar-collapse {
       width: 100%;
-      border-top: 1px solid $gray-200;
+      background-color: $primary;
+      border-top: 1px solid rgba($secondary, 0.55);
       margin-top: $gap-sm;
       padding: $gap-sm 0 $gap-md;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 8px 24px rgba(35, 56, 100, 0.18);
 
       // Hidden until Bootstrap adds .show
       &:not(.show) {
@@ -209,14 +208,18 @@ $gr-5: 6.572rem;    // 136px
         .nav-link {
           font-size: 1rem;
           padding: 0.75rem $gr-1;
-          border-bottom: 1px solid $gray-100;
+          border-bottom: 1px solid rgba($secondary, 0.35);
           border-radius: 0;
+          color: rgba($white, 0.92);
 
-          &::after { display: none; }
+          &::after {
+            display: none;
+          }
 
           &:hover,
           &.active {
-            background-color: rgba($primary, 0.06);
+            background-color: rgba($secondary, 0.08);
+            color: $secondary;
             padding-left: $gr-2;
           }
         }

@@ -4,8 +4,8 @@
   <!-- Brand -->
   <div class="footer-brand">
     <a href="{{ site.baseurl }}/" class="logo">
-      {% if site.logo %}
-        <img src="{{ site.logo.alt }}" alt="{{ site.title }}">
+      {% if site.logo.path %}
+        <img src="{{ site.logo.path | relative_url }}" alt="{{ site.title | escape }}">
       {% else %}
         <span class="site-title">{{ site.title }}</span>
       {% endif %}

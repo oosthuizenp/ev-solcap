@@ -37,11 +37,19 @@
 body {
     overflow-x: hidden;
     font-family: $font-family-base;
+    background-color: $paper;
+    color: $gray-900;
     -webkit-tap-highlight-color: $primary;
 }
 
+.page-section,
+.bg-light,
+.bg-info {
+    background-color: $paper !important;
+}
+
 .bg-newgray {
-    background-color: #f0f0f0;
+    background-color: $paper;
 }
 
 .post {

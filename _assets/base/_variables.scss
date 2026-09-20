@@ -3,7 +3,7 @@
 // ======================================================
 
 // Restated Bootstrap Variables
-$gray-100: #f8f9fa !default;
+$gray-100: #ead9b8;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
@@ -14,10 +14,12 @@ $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 
 // Brand Colors
-$primary:        #0093c9; //00ACC8 
+$primary:        #233864; // main brand/navy
+$secondary:      #be9b51; // accent/gold trim and CTAs
+$paper:          #FAF9F6; // warm off-white background
 $white:          #ffffff;
 $black:          #000000;
-$font-color-1:   $gray-900;   // dark text / footer background
+$font-color-1:   $primary;   // footer/navy background
 $font-color-2:   $gray-600;   // secondary text
 
 // Spacing

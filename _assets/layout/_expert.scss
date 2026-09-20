@@ -44,23 +44,24 @@
       display: inline-block;
   
       &--primary {
-        background-color: $primary;
-        color: white; // Ensure text is white for "Do it Yourself"
+        background-color: $secondary;
+        color: $white;
   
         &:hover {
-          background-color: darken($primary, 10%);
+          background-color: darken($secondary, 10%);
           transform: translateY(-2px);
         }
       }
   
       &--secondary {
-        background-color: transparent;
-        border: 2px solid $primary;
-        color: black; // Ensure text is black for "Speak to an Expert"
+        background-color: $secondary;
+        border: 2px solid $secondary;
+        color: $white;
   
         &:hover {
-          background-color: $primary;
-          color: white; // Keep hover effect consistent
+          background-color: darken($secondary, 10%);
+          border-color: darken($secondary, 10%);
+          color: $white;
           transform: translateY(-2px);
         }
       }

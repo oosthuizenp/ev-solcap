@@ -19,8 +19,8 @@ webserver_headers:
     - GET, OPTIONS, HEAD
 
 logo:
-  path: /assets/img/logo/solomon-capital-logo.png
-  alt: /assets/img/logo/solomon-capital-logo-bw.png
+  path: /assets/img/logo/bg-rem-white-text.png
+  alt: Solomon Capital
 
 exclude: [node_modules, webpack-config.js, package.json, package-lock.json]
 

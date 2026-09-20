@@ -298,7 +298,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem; // gap-2
-  background: $primary;
+  background: $secondary;
   color: $white;
   border: none;
   border-radius: 0.5rem; // rounded-lg
@@ -319,12 +319,12 @@
   }
 
   &:hover:not(:disabled) {
-    background: darken($primary, 10%);
+    background: darken($secondary, 10%);
     transform: translateY(-1px);
   }
 
   &:disabled {
-    background: lighten($primary, 20%);
+    background: lighten($secondary, 20%);
     cursor: not-allowed;
   }
 }

@@ -4,7 +4,7 @@
 
 header.hero {
   color: $gray-900;
-  background-color: $gray-100;
+  background-color: $paper;
   display: flex;
   align-items: center;
   width: 100%;
@@ -90,16 +90,20 @@ header.hero {
   }
 
   // ── Buttons ──────────────────────────────────────────
-.hero-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: $gap-sm;
-  justify-content: flex-start;
+  .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gap-sm;
+    justify-content: flex-start;
 
-  .btn {
-    width: 150px;
+    .btn {
+      width: 300px;
+    }
+
+    @media (min-width: 992px) {
+      justify-content: center;
+    }
   }
-}
 
   // ── Right: Image & Background Card ───────────────────
   .hero-image-container {
