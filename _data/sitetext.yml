@@ -1,5 +1,5 @@
 ﻿header:
-  title: "Home Loan and Bond Origination Help in Durban"
+  title: "Home Loan and Bond Origination"
   text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Solomon Capital provides comprehensive financial solutions to help you achieve your property goals."
 holding_page:
   construction:
@@ -128,13 +128,13 @@ portfolio:
 
 about:
   title: "About Solomon Capital"
-  text2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Solomon Capital is a professional financial services provider.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.<br><br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum."
-  text3: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  text2: "At Solomon Capital, we’re committed to helping you secure the best possible interest rate on your home loan. Our experience in the bond origination space, together with our strong industry relationships and in-depth understanding of the lending criteria for each bank, significantly increases your chances of securing a loan – and our services are free of charge. So, if you’re looking for an expert to guide you through the homebuying journey, get in touch with us today."
+  text3: "We help people own homes."
 
 clients:
   title: "We Submit Applications to Major South African Banks"
   title2: "Experienced, Knowledgeable & Dedicated to Customer Service"
-  text: "We send your home-loan application to leading South African banks, helping you compare offers and choose the option that fits best."
+  text: "We send your application to the leading South African banks, helping you compare offers and choose the option that fits best."
   section: clients
   max-height: 120px
   horizontal-scrolling: ""
@@ -170,7 +170,7 @@ experienced:
 
 team:
   title: "The Team"
-  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  text: "Friendly guidance for every step of your home loan journey."
   section: team
   people:
     - name: "Office Hours"
@@ -187,7 +187,7 @@ team:
     - name: "Sihle<br>Ndlela"
       role: "Primary Contact"
       image: assets/img/team/eveshan-profile.png
-      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      bio: "Your friendly first point of contact for home loan questions and applications."
       social:
         - url: tel:+27694430046
           icon: fas fa-phone

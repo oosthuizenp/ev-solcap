@@ -14,11 +14,37 @@
   border-radius: 50px;
   padding: 0.75rem 1.75rem;
   transition: all 0.3s ease;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
+
+  // White light swish overlay (hidden by default)
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.25) 40%,
+      rgba(255, 255, 255, 0.4) 50%,
+      rgba(255, 255, 255, 0.25) 60%,
+      transparent
+    );
+    transition: left 0.5s ease;
+    pointer-events: none;
+  }
 
   &:hover {
     transform: translateY(-2px);
     box-shadow: $shadow-md;
+
+    // Trigger the white light swish
+    &::before {
+      left: 100%;
+    }
   }
 
   &:active {
@@ -36,35 +62,35 @@
 .btn-primary {
   background-color: $secondary;
   color: $white;
-  border-color: $secondary;
+  border-color: darken($secondary, 8%);
 
   &:hover {
     background-color: darken($secondary, 10%);
-    border-color: darken($secondary, 10%);
+    border-color: darken($secondary, 15%);
     color: $white;
   }
 }
 
 .btn-outline-primary {
-  background-color: $secondary;
-  color: $white;
+  background-color: transparent;
+  color: $secondary;
   border-color: $secondary;
 
   &:hover {
-    background-color: darken($secondary, 10%);
-    border-color: darken($secondary, 10%);
+    background-color: $secondary;
+    border-color: darken($secondary, 12%);
     color: $white;
   }
 }
 
 .btn-outline {
-  background-color: $secondary;
-  color: $white;
+  background-color: transparent;
+  color: $secondary;
   border-color: $secondary;
 
   &:hover {
-    background-color: darken($secondary, 10%);
-    border-color: darken($secondary, 10%);
-    color: $white;
+    background-color: rgba($secondary, 0.08);
+    border-color: darken($secondary, 12%);
+    color: darken($secondary, 8%);
   }
 }

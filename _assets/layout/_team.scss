@@ -186,6 +186,10 @@
 
 // ── Team v3 / Grid Layout (team3.html) ───────────────────
 .team-card-v {
+  max-width: 350px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   background: $white;
   border-radius: 16px;
   overflow: hidden;

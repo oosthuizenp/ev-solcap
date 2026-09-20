@@ -6,6 +6,7 @@
   justify-content: center;
   text-align: center;
   padding: 5rem 1rem;
+  background-color: $paper;
 //  min-height: 100vh; // Ensures it takes full viewport height
 
   .container {
@@ -36,19 +37,19 @@
   &-card,
   &__card {
     background: #fff;
-    border-radius: 12px;
+    border-radius: 10px;
     padding: 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     height: 100%;
     
     &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
     }
   }
   
@@ -322,7 +323,7 @@
   overflow: hidden;
   width: 100%;
   border: 1px solid rgba(0, 45, 98, 0.1);
-  border-radius: 8px;
+  border-radius: 10px;
   background: #fff;
   box-shadow: 0 18px 45px rgba(0, 45, 98, 0.1);
 
@@ -332,55 +333,127 @@
 }
 
 .calculator-faq {
-  padding: 1rem 0 4.5rem;
+  padding: 3rem 0 5rem;
+  background-color: $paper;
 
   &__header {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
     text-align: center;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, $secondary, transparent);
+      margin: 1rem auto 0;
+      border-radius: 2px;
+    }
   }
 
   &__eyebrow {
-    margin-bottom: 0.35rem;
-    color: #0093c9;
-    font-size: 0.8rem;
-    font-weight: 800;
-    letter-spacing: 0.14em;
+    margin-bottom: 0.5rem;
+    color: $secondary;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
+    @include heading-font;
   }
 
   h2 {
     margin: 0;
-    color: #002d62;
-    font-size: clamp(1.65rem, 3vw, 2.3rem);
-    font-weight: 800;
+    color: $primary;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    @include heading-font;
   }
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 576px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__item {
-    padding: 1.35rem;
-    border: 1px solid rgba(0, 45, 98, 0.1);
-    border-radius: 8px;
-    background: #fff;
-    box-shadow: 0 8px 22px rgba(0, 45, 98, 0.06);
+    padding: 1.75rem 1.5rem;
+    background: $white;
+    border-radius: 10px;
+    border: 1px solid rgba($primary, 0.08);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(180deg, $secondary, darken($secondary, 15%));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      border-color: rgba($secondary, 0.2);
+
+      &::before {
+        opacity: 1;
+      }
+    }
   }
 
   h3 {
-    margin-bottom: 0.7rem;
-    color: #002d62;
-    font-size: 1.05rem;
-    font-weight: 800;
-    line-height: 1.35;
+    margin: 0 0 0.75rem;
+    color: $primary;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.4;
+    @include heading-font;
+    letter-spacing: -0.01em;
   }
 
   p {
     margin: 0;
-    color: #5d6975;
-    line-height: 1.65;
+    color: #4a5568;
+    font-size: 0.925rem;
+    line-height: 1.7;
+    @include body-font;
+  }
+
+  // Question icon
+  &__question-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: rgba($secondary, 0.1);
+    border-radius: 50%;
+    color: $secondary;
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+    i {
+      margin-right: 0;
+    }
   }
 }
 

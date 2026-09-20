@@ -5,6 +5,7 @@
   flex-wrap: wrap;
   gap: 20px; // Keeps spacing consistent
   justify-content: space-between; // Maintain original layout for wider screens
+  background-color: $paper;
 
   .card {
     border: none;

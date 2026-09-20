@@ -5,6 +5,7 @@
 #clients {
   position: relative;
   z-index: 1;
+  background-color: $paper;
 
   .section-heading {
     @include heading-font;
@@ -18,16 +19,16 @@
   }
 
   .client-logo-card {
-    width: 100px;
-    height: 100px;
-    background-color: $white;
+    width: 125px;
+    height: 125px;
+    background-color: #fff;
     border-radius: 12px;
-    box-shadow: $shadow-sm;
-    margin: $gap-sm;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
+    margin: .5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.2s ease;
+    transition: transform .2s ease;
 
     &:hover {
       transform: translateY(-4px);
@@ -49,9 +50,9 @@
   // Responsive
   @include respond-to(mobile) {
     .client-logo-card {
-      width: 80px;
-      height: 80px;
-      margin: $gap-sm * 0.5;
+      width: 100px;
+      height: 100px;
+      margin: .25rem;
 
       img {
         max-height: 40px;
