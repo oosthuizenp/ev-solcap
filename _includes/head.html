@@ -10,7 +10,7 @@
 {% assign seo_title = page.og_title | default: page_title %}
 {% assign seo_description = page.og_description | default: page.description | default: site.description %}
 {% endif %}
-{% assign social_image_path = page.image | default: '/social_916x509.jpg' %}
+{% assign social_image_path = page.image | default: site.social_image | default: '/assets/img/social/social_916x509.jpg' %}
 {% assign social_image_url = social_image_path | absolute_url %}
 
 <head>
