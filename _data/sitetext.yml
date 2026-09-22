@@ -3,10 +3,9 @@
   text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Solomon Capital provides comprehensive financial solutions to help you achieve your property goals."
 holding_page:
   construction:
-    label: "Coming Soon"
     title: "Site coming soon"
     text: "We are getting everything ready. Please check back shortly."
-    contact_text: "For urgent enquiries, contact us at Info@solomoncapital.co.za."
+    contact_text: "For urgent enquiries, contact us at Info@solomoncapital.co.za"
   unavailable:
     label: "Offline..."
     title: "Site temporarily unavailable"

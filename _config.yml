@@ -19,7 +19,7 @@ webserver_headers:
     - GET, OPTIONS, HEAD
 
 logo:
-  path: /assets/img/logo/bg-rem-white-text.png
+  path: /assets/img/logo/bg-rem-dark-text.png
   alt: Solomon Capital
 
 exclude: [node_modules, webpack-config.js, package.json, package-lock.json]
@@ -30,8 +30,8 @@ powered_by_url: https://evohomeloans.co.za
 company: Solomon Capital
 
 holding_page:
-  enabled: false
-  mode: unavailable # construction or unavailable
+  enabled: true
+  mode: construction # construction or unavailable
 
 contact:
   phone: +27 69 443 0046
