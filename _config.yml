@@ -22,6 +22,8 @@ logo:
   path: /assets/img/logo/bg-rem-dark-text.png
   alt: Solomon Capital
 
+social_image: /assets/img/social/social_916x509.jpg
+
 exclude: [node_modules, webpack-config.js, package.json, package-lock.json]
 
 group: evo Home Loans
