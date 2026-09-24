@@ -35,7 +35,7 @@ powered_by_url: https://evohomeloans.co.za
 company: Solomon Capital
 
 holding_page:
-  enabled: false
+  enabled: true
   mode: construction # construction or unavailable
 
 contact:
