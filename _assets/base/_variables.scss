@@ -25,6 +25,18 @@ $black:          #000000;
 $font-color-1:   $primary;
 $font-color-2:   #5A4250;
 
+// Breakpoints
+$bp-sm:          560px;
+$bp-md:          768px;
+$bp-lg:          1200px;
+
+// Layout
+$container-width: 1200px;
+$container-padding-mobile: 1rem;
+$container-padding-large-mobile: 1.5rem;
+$container-padding-tablet: 2rem;
+$container-padding-desktop: 2.5rem;
+
 // Spacing
 $gap-sm:         0.5rem;
 $gap-md:         1rem;

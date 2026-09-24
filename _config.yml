@@ -27,7 +27,15 @@ logo:
 
 social_image: /assets/img/social/social_916x509.jpg
 
-exclude: [node_modules, webpack-config.js, package.json, package-lock.json]
+exclude:
+  - node_modules
+  - webpack-config.js
+  - package.json
+  - package-lock.json
+  - design
+  - design/**
+  - scratch
+  - scratch/**
 
 group: evo Home Loans
 powered_by_url: https://evohomeloans.co.za
@@ -35,7 +43,7 @@ powered_by_url: https://evohomeloans.co.za
 company: Solomon Capital
 
 holding_page:
-  enabled: true
+  enabled: false
   mode: construction # construction or unavailable
 
 contact:

@@ -42,8 +42,8 @@ $gr-5: 6.572rem;    // 136px
   .container {
     display: flex;
     align-items: center;
-    width: min(1100px, calc(100% - 2rem));
-    max-width: 1100px;
+    width: min(100%, calc(#{$container-width} - 2rem));
+    max-width: $container-width;
     margin: 0 auto;
     padding: 0;
   }
@@ -205,8 +205,8 @@ $gr-5: 6.572rem;    // 136px
     }
   }
 
-  // ── Desktop ≥992px (Bootstrap lg breakpoint) ───────
-  @media (min-width: 992px) {
+  // ── Desktop ≥1200px ─────────────────────────────────
+  @media (min-width: $bp-lg) {
     .navbar-brand img {
       height: 65px;
     }
@@ -230,8 +230,8 @@ $gr-5: 6.572rem;    // 136px
     }
   }
 
-  // ── Mobile <992px ──────────────────────────────────
-  @media (max-width: 991px) {
+  // ── Mobile and tablet below desktop breakpoint ─────
+  @media (max-width: 1199px) {
     height: auto;
     padding: $gap-sm $gr-1;
     flex-wrap: wrap;
