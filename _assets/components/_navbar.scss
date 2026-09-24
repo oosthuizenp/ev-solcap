@@ -42,8 +42,8 @@ $gr-5: 6.572rem;    // 136px
   .container {
     display: flex;
     align-items: center;
-    width: min(100%, calc(#{$container-width} - 2rem));
-    max-width: $container-width;
+    width: min(100%, calc(1200px - 2rem));
+    max-width: 1157px;
     margin: 0 auto;
     padding: 0;
   }
