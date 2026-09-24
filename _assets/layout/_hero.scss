@@ -4,7 +4,8 @@
 
 header.hero {
   color: $primary;
-  background: #233863;
+  background: radial-gradient(circle at top left, rgba(146, 194, 150, 0.12), transparent 30%),
+              linear-gradient(135deg, #233863 0%, #2f4278 48%, #1d2d54 100%);
   display: flex;
   align-items: center;
   width: 100%;
@@ -13,11 +14,39 @@ header.hero {
   position: relative;
   overflow: hidden;
 
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  &::before {
+    width: 28rem;
+    height: 28rem;
+    top: -10rem;
+    right: -8rem;
+    background: rgba(255, 255, 255, 0.09);
+    filter: blur(6px);
+  }
+
+  &::after {
+    width: 24rem;
+    height: 24rem;
+    left: -8rem;
+    bottom: -8rem;
+    background: rgba(199, 154, 58, 0.12);
+  }
+
   .container {
     width: 100%;
     max-width: $container-width;
     margin: 0 auto;
     padding: 0 $gr-2;
+    position: relative;
+    z-index: 1;
   }
 
   // ── Two-column layout ────────────────────────────────
@@ -39,9 +68,26 @@ header.hero {
     padding: clamp(2rem, 4vw, 4rem);
     text-align: left;
     z-index: 2;
-    background: #233863;
+    background: linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+    border: 1px solid rgba(255,255,255,0.12);
     border-radius: 32px;
-    box-shadow: 0 18px 38px rgba(35, 56, 99, 0.12);
+    box-shadow: 0 22px 45px rgba(13, 24, 42, 0.22);
+    backdrop-filter: blur(3px);
+  }
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-self: flex-start;
+    padding: 0.42rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.82);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1.1rem;
   }
 
   .section-heading {
@@ -64,6 +110,32 @@ header.hero {
     max-width: 520px;
   }
 
+  .hero-badges {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.45rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(199, 154, 58, 0.16);
+    border: 1px solid rgba(199, 154, 58, 0.28);
+    color: #f7e8b3;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+
+    &--soft {
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.9);
+    }
+  }
+
   .hero-highlights {
     display: flex;
     align-items: center;
@@ -77,11 +149,11 @@ header.hero {
       gap: 0.6rem;
       font-size: 0.95rem;
       font-weight: 600;
-      color: #002d62;
+      color: #f3f4ff;
       @include heading-font;
 
       i {
-        color: $primary;
+        color: #d7b86a;
         font-size: 1.1rem;
       }
     }
@@ -89,7 +161,7 @@ header.hero {
     .highlight-divider {
       width: 4px;
       height: 4px;
-      background-color: $gray-300;
+      background-color: rgba(255,255,255,0.45);
       border-radius: 50%;
     }
   }
@@ -106,7 +178,7 @@ header.hero {
     }
 
     @media (min-width: $bp-lg) {
-      justify-content: center;
+      justify-content: flex-start;
     }
   }
 
@@ -121,12 +193,46 @@ header.hero {
     background-size: cover;
     background-position: center;
     box-shadow: 0 22px 44px rgba(77, 27, 54, 0.12);
+    border: 1px solid rgba(255,255,255,0.12);
 
     &::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(77,27,54,0.12));
+      background: linear-gradient(135deg, rgba(35,56,99,0.18), rgba(77,27,54,0.22));
+    }
+  }
+
+  .hero-image-card {
+    position: absolute;
+    left: 1.5rem;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    max-width: 220px;
+    padding: 1rem 1.1rem;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.24);
+    color: #fff;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 18px 32px rgba(12, 18, 34, 0.18);
+
+    &__label {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.72);
+    }
+
+    strong {
+      font-size: 1.05rem;
+      line-height: 1.35;
+      font-weight: 700;
+      color: #fff;
     }
   }
 
