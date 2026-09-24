@@ -93,7 +93,7 @@ more-calculators:
 textblock:
   title: "How the Bond Application Process Works"
   text: ""
-  footer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor."
+  footer: "We help you understand the steps, the paperwork and the lender decisions involved in getting a home loan approved."
   section: textblock
   list:
     - title: "<strong>Plan</strong> - Ask for pre-qualification guidance before you make an offer."
@@ -111,7 +111,7 @@ textblock:
 
 portfolio:
   title: "Other Services"
-  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  text: "Helpful support for buyers, refinancers and property clients looking for a clearer path to finance."
   section: portfolio
   closebutton: "Close"
 
@@ -155,7 +155,7 @@ clients:
 
 experienced:
   title: "Clear Guidance Before You Apply"
-  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  text: "We help you understand the numbers before you commit, so the home-loan process feels more manageable and better informed."
 
 team:
   title: "The Team"

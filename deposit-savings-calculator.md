@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Deposit Savings Calculator
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Calculate how much deposit you need for your home loan and plan your savings with our deposit savings calculator.
+description: Plan your deposit and estimate how long it may take to save enough for a home loan in South Africa.
 background: white
 calculator: deposit
 iframe_class: deposit-calc

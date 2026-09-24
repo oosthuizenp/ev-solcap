@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Home Loan Amortisation Calculator
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Use our home loan amortisation calculator to understand your repayment schedule and compare extra repayment benefits.
+description: Understand how your bond balance, monthly repayments and interest costs change over time with our amortisation calculator.
 background: white
 calculator: amortisation
 iframe_class: amortisation-calc

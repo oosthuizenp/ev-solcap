@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Transfer Cost Calculator
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Estimate your bond registration and transfer costs quickly with our transfer cost calculator for South African home buyers.
+description: Estimate the transfer and bond registration costs involved in buying a property in South Africa.
 background: white
 calculator: transfer
 iframe_class: transfer-calc

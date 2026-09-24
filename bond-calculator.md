@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Bond Repayment Calculator
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Estimate your monthly home loan repayments with our bond repayment calculator.
+description: Estimate your monthly home loan repayment and see how interest rate and loan amount changes affect your budget.
 background: white
 calculator: bond
 iframe_class: bond-calc

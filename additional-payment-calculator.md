@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Extra Repayment Calculator
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Explore the savings from extra home loan repayments with our interactive extra repayment calculator.
+description: See how extra monthly mortgage payments can reduce your home-loan balance and shorten the repayment timeline.
 background: white
 calculator: additional
 iframe_class: additional-payment-calc
