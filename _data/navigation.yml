@@ -1,9 +1,6 @@
 nav:
-  - title: "Services"
-    section: services
-
   - title: "The Process"
-    section: textblock
+    section: services
 
   - title: "FAQ"
     section: home-loan-faq
