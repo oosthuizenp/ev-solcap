@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Privacy Statement
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Solomon Capital provides comprehensive financial solutions to help you achieve your property goals.
+description: Read Solomon Capital's privacy statement and understand how we handle personal information, consent and data protection for home-loan enquiries.
 background: grey
 permalink: /privacy-statement/
 ---

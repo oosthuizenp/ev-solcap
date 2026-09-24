@@ -14,13 +14,13 @@ holding_page:
 
 expert:
   title: "Buy with Confidence"
-  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt."
+  text: "Get practical home-loan guidance before you make an offer, so you understand your affordability, paperwork and next steps with more confidence."
   button 1 text: ""
   button 2 text: ""
 
 nocharge:
   title: "No Charge for our Service"
-  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+  text: "There is no charge for our home-loan service. We help you compare options, prepare your application and understand what to expect from the lender process."
   button 1 text: ""
   button 2 text: ""
 
@@ -212,7 +212,7 @@ testimonials:
 
 contact:
   title: "Get in Touch"
-  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  text: "Speak to our team about your home-loan questions, affordability concerns and the next steps in your bond application."
   section: contact
   office_hours:
     title: "Office Hours"

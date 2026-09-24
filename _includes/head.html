@@ -12,6 +12,8 @@
 {% endif %}
 {% assign social_image_path = page.image | default: site.social_image | default: '/assets/img/social/social_916x509.jpg' %}
 {% assign social_image_url = social_image_path | absolute_url %}
+{% assign seo_title_text = page.og_title | default: page.title | default: site.title %}
+{% assign title_text = page.title | default: site.title %}
 
 <head>
 {% if site.analytics.google %}
@@ -36,7 +38,8 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ canonical_url }}">
-  <meta property="og:title" content="{% if page.title %}{{ seo_title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:locale" content="{{ site.locale | default: 'en_ZA' }}">
+  <meta property="og:title" content="{% if seo_title_text contains site.title %}{{ seo_title_text }}{% else %}{{ seo_title_text }} | {{ site.title }}{% endif %}">
   <meta property="og:description" content="{{ seo_description | strip_html | escape }}">
   <meta property="og:image" content="{{ social_image_url }}">
   <meta property="og:site_name" content="{{ site.title }}">
@@ -44,7 +47,7 @@
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="{{ canonical_url }}">
-  <meta property="twitter:title" content="{% if page.title %}{{ seo_title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="twitter:title" content="{% if seo_title_text contains site.title %}{{ seo_title_text }}{% else %}{{ seo_title_text }} | {{ site.title }}{% endif %}">
   <meta property="twitter:description" content="{{ seo_description | strip_html | escape }}">
   <meta property="twitter:image" content="{{ social_image_url }}">
 
@@ -52,7 +55,7 @@
   <meta name="author" content="{{ site.author }}">
   <link rel="canonical" href="{{ canonical_url }}">
 
-  <title>{% if page.title %}{{ page.title | append: " | " | append: site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <title>{% if title_text contains site.title %}{{ title_text }}{% else %}{{ title_text }} | {{ site.title }}{% endif %}</title>
 
   <link rel="icon" href="{{ site.baseurl }}/favicon.png" type="image/png">
   <link rel="stylesheet" href="{{ site.baseurl | append: "/assets/bundle.css" | relative_url }}">

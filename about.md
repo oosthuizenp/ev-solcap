@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About Solomon Capital
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Solomon Capital provides comprehensive financial solutions to help you achieve your property goals.
+description: Learn about Solomon Capital, a Durban-based bond origination team helping home buyers and homeowners compare lender options, understand affordability and make informed decisions.
 background: gray
 permalink: /about/
 ---

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Data Sharing Agreement
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Solomon Capital provides comprehensive financial solutions to help you achieve your property goals.
+description: Learn how Solomon Capital handles third-party personal information, consent and data sharing in line with POPIA requirements.
 background: grey
 permalink: /data-sharing-agreement/
 ---

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Contact Solomon Capital
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Solomon Capital provides comprehensive financial solutions to help you achieve your property goals.
+description: Speak to Solomon Capital about home-loan guidance, affordability questions, and the next steps in your bond application process.
 background: gray
 permalink: /contact/
 ---

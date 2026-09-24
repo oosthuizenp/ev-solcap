@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Bond Affordability Calculator
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Estimate how much you could afford to borrow for a home loan with our South African bond affordability calculator.
+description: Estimate how much you may qualify to borrow for a home loan in South Africa using Solomon Capital’s affordability calculator.
 background: white
 calculator: affordability
 iframe_class: afford-calc

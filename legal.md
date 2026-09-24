@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Privacy Policy
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Solomon Capital provides comprehensive financial solutions to help you achieve your property goals.
+description: Review Solomon Capital's privacy policy for website activity, enquiry handling and personal information processing.
 background: grey
 permalink: /legal/
 ---

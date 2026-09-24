@@ -1,6 +1,6 @@
 ---
 layout: home
 title: Home Loan and Bond Origination Help in Durban
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Solomon Capital provides comprehensive financial solutions to help you achieve your property goals.
+description: Home loan and bond origination support in Durban. We help buyers, refinancers and self-employed applicants understand affordability, compare offers and move through the home-loan process with confidence.
 schema_type: HomePage
 ---

@@ -1,10 +1,13 @@
 baseurl: ""
 url: https://solomoncapital.co.za
+locale: en_ZA
 
 title: Solomon Capital
+business_name: Solomon Capital
+service_area: Durban, KwaZulu-Natal
 email: Info@solomoncapital.co.za
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Solomon Capital provides professional financial services and home loan assistance.
-author: E.Roux / P.Oosthuizen
+description: Home loan and bond origination support in Durban. We help buyers, refinancers and self-employed applicants understand affordability, compare lenders and move through the application process with confidence.
+author: Solomon Capital team
 
 
 collections:
