@@ -12,35 +12,46 @@ $gr-4: 4.236rem;    // 68px
 $gr-5: 6.572rem;    // 136px
 
 #mainNav {
-  background-color: $primary;
-  padding: 0 1.618rem;
-  height: 6.572rem;
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
-  transition: all 0.35s ease;
-  position: relative;
-  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: none;
+  box-shadow: none;
+  padding: 0;
+  height: 88px;
+  z-index: 1030;
+  transition: transform 0.35s ease, opacity 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+
+  &.navbar-shrink {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  &.nav-hidden {
+    transform: translateY(-120%);
+    opacity: 0;
+    pointer-events: none;
+  }
 
   // Let Bootstrap handle the container layout
   .container {
     display: flex;
     align-items: center;
-    width: 100%;
-  }
-
-  // Shrunk state on scroll
-  &.navbar-shrink {
-    height: $gr-3;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.13);
-
-    .navbar-brand img {
-      height: $gr-4;
-    }
+    width: min(1100px, calc(100% - 2rem));
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0;
   }
 
   // ── Brand ──────────────────────────────────────────
   .navbar-brand {
     @include heading-font;
-    color: $white;
+    color: $primary;
     font-size: 1.4rem;
     font-weight: 700;
     letter-spacing: -0.02em;
@@ -58,25 +69,26 @@ $gr-5: 6.572rem;    // 136px
     }
 
     img {
-      height: $gr-4;
+      height: 42px;
       width: auto;
       transition: height 0.35s ease;
+      display: block;
+      filter: drop-shadow(0 2px 4px rgba(77, 27, 54, 0.06));
     }
   }
 
   // ── Toggler — Bootstrap controls visibility ─────────
-  // DO NOT set display:none here — let navbar-expand-lg handle it
   .navbar-toggler {
     @include heading-font;
     font-size: 0.85rem;
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    padding: 0.45rem $gr-1;
-    color: $primary;
+    padding: 0.55rem 1rem;
+    color: $white;
     background-color: $secondary;
     border: none;
-    border-radius: 2px;
+    border-radius: 999px;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -106,31 +118,31 @@ $gr-5: 6.572rem;    // 136px
   .navbar-nav {
     @include heading-font;
     align-items: center;
+    margin-left: auto;
 
     .nav-item {
       position: relative;
 
       .nav-link {
-        font-size: 0.95rem;
-        font-weight: 500;
-        letter-spacing: 0.03em;
-        color: rgba($white, 0.9);
-        padding: 0.5rem $gr-1;
-        border-radius: 2px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        color: rgba(255, 255, 255, 0.95);
+        padding: 0.75rem 0.9rem;
+        border-radius: 999px;
         text-decoration: none;
         transition: color 0.2s ease, background-color 0.2s ease;
         white-space: nowrap;
         position: relative;
 
-        // Underline slide-in
         &::after {
           content: '';
           position: absolute;
-          bottom: 0;
-          left: $gr-1;
-          right: $gr-1;
+          bottom: 0.35rem;
+          left: 0.9rem;
+          right: 0.9rem;
           height: 2px;
-          background-color: $secondary;
+          background-color: #ffffff;
           transform: scaleX(0);
           transform-origin: left center;
           transition: transform 0.25s ease;
@@ -138,8 +150,8 @@ $gr-5: 6.572rem;    // 136px
 
         &:hover,
         &.active {
-          color: $secondary;
-          background-color: rgba($secondary, 0.08);
+          color: #ffffff;
+          background-color: rgba(255, 255, 255, 0.08);
 
           &::after {
             transform: scaleX(1);
@@ -149,26 +161,69 @@ $gr-5: 6.572rem;    // 136px
     }
   }
 
+  &.navbar-light-page {
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          color: rgba(20, 20, 20, 0.9);
+
+          &::after {
+            background-color: #111111;
+          }
+
+          &:hover,
+          &.active {
+            color: #111111;
+            background-color: rgba(17, 17, 17, 0.06);
+          }
+        }
+      }
+    }
+  }
+
+  .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    padding: 0.8rem 1.4rem !important;
+    background: linear-gradient(135deg, $secondary 0%, darken($secondary, 8%) 100%);
+    color: $white !important;
+    border-radius: 999px;
+    box-shadow: 0 12px 24px rgba(199, 154, 58, 0.22);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    &:hover {
+      background: linear-gradient(135deg, darken($secondary, 6%) 0%, darken($secondary, 12%) 100%);
+      color: $white !important;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
   // ── Desktop ≥992px (Bootstrap lg breakpoint) ───────
   @media (min-width: 992px) {
-    padding: 0 $gr-3;
+    .navbar-brand img {
+      height: 65px;
+    }
 
     .navbar-nav {
-      margin-left: auto;
       flex-direction: row;
       gap: 0.15rem;
 
       .nav-link {
-        font-size: 1rem;
+        font-size: 0.96rem;
       }
     }
 
-    // Toggler must be hidden — belt AND braces
     .navbar-toggler {
       display: none !important;
     }
 
-    // Collapse must always be visible on desktop
     .navbar-collapse {
       display: flex !important;
       flex-basis: auto;
@@ -185,15 +240,18 @@ $gr-5: 6.572rem;    // 136px
       height: auto;
     }
 
+    .navbar-brand img {
+      height: 36px;
+    }
+
     .navbar-collapse {
       width: 100%;
-      background-color: $primary;
-      border-top: 1px solid rgba($secondary, 0.55);
+      background: transparent;
+      border-top: none;
       margin-top: $gap-sm;
       padding: $gap-sm 0 $gap-md;
-      box-shadow: 0 8px 24px rgba(35, 56, 100, 0.18);
+      box-shadow: none;
 
-      // Hidden until Bootstrap adds .show
       &:not(.show) {
         display: none;
       }
@@ -206,11 +264,10 @@ $gr-5: 6.572rem;    // 136px
 
       .nav-item {
         .nav-link {
-          font-size: 1rem;
-          padding: 0.75rem $gr-1;
-          border-bottom: 1px solid rgba($secondary, 0.35);
+          font-size: 0.96rem;
+          padding: 0.8rem $gr-1;
           border-radius: 0;
-          color: rgba($white, 0.92);
+          color: #ffffff;
 
           &::after {
             display: none;
@@ -218,16 +275,19 @@ $gr-5: 6.572rem;    // 136px
 
           &:hover,
           &.active {
-            background-color: rgba($secondary, 0.08);
-            color: $secondary;
+            background-color: rgba(255, 255, 255, 0.08);
+            color: #ffffff;
             padding-left: $gr-2;
           }
         }
-
-        &:last-child .nav-link {
-          border-bottom: none;
-        }
       }
+    }
+
+    .nav-cta {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 0.5rem;
+      padding: 0.85rem 1rem !important;
     }
   }
 }

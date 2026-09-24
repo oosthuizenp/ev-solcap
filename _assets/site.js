@@ -20,13 +20,24 @@ $(function () {
         offset: 56
     });
 
-    // Navbar shrink on scroll
+    // Navbar shrink on scroll and hide when moving down
+    var lastScrollTop = 0;
     $(window).on("scroll", function () {
-        if ($("#mainNav").offset().top > 100) {
+        var currentScrollTop = $(window).scrollTop();
+
+        if (currentScrollTop > 80) {
             $("#mainNav").addClass("navbar-shrink");
         } else {
             $("#mainNav").removeClass("navbar-shrink");
         }
+
+        if (currentScrollTop > lastScrollTop && currentScrollTop > 120) {
+            $("#mainNav").addClass("nav-hidden");
+        } else {
+            $("#mainNav").removeClass("nav-hidden");
+        }
+
+        lastScrollTop = currentScrollTop;
     });
 
     // Back to Top Button Logic

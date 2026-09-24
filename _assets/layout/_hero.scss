@@ -3,8 +3,8 @@
 // ======================================================
 
 header.hero {
-  color: $gray-900;
-  background-color: $paper;
+  color: $primary;
+  background: #233863;
   display: flex;
   align-items: center;
   width: 100%;
@@ -15,7 +15,7 @@ header.hero {
 
   .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1220px;
     margin: 0 auto;
     padding: 0 $gr-2;
   }
@@ -24,9 +24,10 @@ header.hero {
   .hero-content {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;        // Keeps image and text on one line
-    align-items: center;
+    flex-wrap: nowrap;
+    align-items: stretch;
     gap: $gr-3;
+    background: transparent;
   }
 
   // ── Left: Text ───────────────────────────────────────
@@ -35,28 +36,32 @@ header.hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: $gap-md 0;
+    padding: clamp(2rem, 4vw, 4rem);
     text-align: left;
     z-index: 2;
+    background: #233863;
+    border-radius: 32px;
+    box-shadow: 0 18px 38px rgba(35, 56, 99, 0.12);
   }
 
   .section-heading {
     @include heading-font;
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 700;
-    line-height: 1.15;
-    color: $gray-900;
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    font-weight: 800;
+    line-height: 0.94;
+    color: #ffffff;
     margin-bottom: $gap-md;
-    text-transform: none;     // REMOVES ALL CAPS
+    text-transform: none;
+    letter-spacing: -0.05em;
   }
 
   .hero-subheading {
     @include body-font;
-    font-size: 1.1rem;
+    font-size: 1.08rem;
     line-height: 1.7;
-    color: $gray-700;
+    color: rgba(255, 255, 255, 0.92);
     margin-bottom: $gap-lg;
-    max-width: 480px;
+    max-width: 520px;
   }
 
   .hero-highlights {
@@ -107,59 +112,21 @@ header.hero {
 
   // ── Right: Image & Background Card ───────────────────
   .hero-image-container {
-    flex: 0 0 420px;
-    width: 420px;
-    height: 420px;
-    border-radius: 24px;
+    flex: 1.1;
+    min-height: 520px;
+    border-radius: 32px;
     position: relative;
+    overflow: hidden;
+    background-image: url("/assets/img/hero/hero-box.jpg");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 22px 44px rgba(77, 27, 54, 0.12);
 
-    // This creates a new stacking context so the card stays
-    // behind the image but doesn't disappear into the page background
-    isolation: isolate;
-
-    // VISIBLE allows the offset card to show outside the bounds
-    overflow: visible;
-
-    // The Tilt
-    transform: rotate(6deg);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    margin: $gap-lg $gap-lg $gap-lg 0;
-
-    // ── THE IMAGE LAYER ──
-    // We use a pseudo-element for the image itself to ensure
-    // it sits ON TOP of the primary colored card.
-    &::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image: url("/assets/img/hero/hero-box.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      border-radius: 24px;
-      box-shadow: $shadow-lg;
-      z-index: 2; // Image is on top
-    }
-
-    // ── THE OFFSET CARD LAYER ──
     &::before {
       content: "";
       position: absolute;
       inset: 0;
-      background-color: $primary;
-      border-radius: 24px;
-      z-index: 1; // Card is behind the image (z-index 2)
-
-      // Offset by 5 degrees relative to parent
-      transform: rotate(-5deg);
-      transition: transform 0.4s ease;
-    }
-
-    &:hover {
-      transform: rotate(3deg) scale(1.02);
-      &::before {
-        transform: rotate(-2deg);
-      }
+      background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(77,27,54,0.12));
     }
   }
 

@@ -1,6 +1,6 @@
 ﻿header:
   title: "Home Loan and Bond Origination"
-  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Solomon Capital provides comprehensive financial solutions to help you achieve your property goals."
+  text: "Looking for a smoother, less stressful way to get a home loan? We help you sort the numbers, the paperwork, and the bank process without the usual runaround."
 holding_page:
   construction:
     title: "Site coming soon"
@@ -25,28 +25,18 @@ nocharge:
   button 2 text: ""
 
 services:
-  title: "Home Loan Services"
-  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Solomon Capital assists clients with tailored financial solutions across South Africa."
+  title: "How the home loan process works"
+  text: "From your first question to final registration, we help you make confident decisions at every stage of the bond journey."
   section: services
-  list:
+  steps:
     - title: "Pre-qualification guidance"
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
-      icon: fas fa-tasks
-      link:
-        url: /contact/
-        text: "Request pre-qualification help"
-    - title: "Bond origination"
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate."
-      icon: fas fa-home
-      link:
-        url: /contact/
-        text: "Start a bond enquiry"
-    - title: "Refinancing and switch enquiries"
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident."
-      icon: fas fa-exchange-alt
-      link:
-        url: /contact/
-        text: "Ask about refinancing"
+      copy: "We assess your affordability, goals, and borrowing position early so you know what you can comfortably afford before you make an offer."
+    - title: "Application"
+      copy: "Once you have found a property, we prepare your application and gather the supporting documents needed by the bank."
+    - title: "Submission to bank"
+      copy: "We submit your file to the right lenders, track the progress, and help you compare the offers that come back."
+    - title: "Loan completion"
+      copy: "We stay involved through the final steps to registration, helping keep the process moving smoothly until your loan is approved and in place."
 
 articles:
   title: "Articles"
@@ -55,23 +45,23 @@ articles:
 
 calculators:
   title: "Home Loan Calculators"
-  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Solomon Capital provides calculators to help you estimate your financial options."
+  text: "Need a quick estimate before you start? These handy tools make it easier to check what you can afford and what the deal might cost."
   section: calculators
   list:
     - title: "Affordability Calculator"
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      desc: "Work out roughly how much you could borrow based on your income and monthly expenses."
       icon: fas fa-calculator
       link:
         url: /affordability-calculator/
         text: "Estimate affordability"
     - title: "Bond Repayment Calculator"
-      desc: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      desc: "See what your monthly bond payment could look like and how different loan amounts affect it."
       icon: fas fa-calculator
       link:
         url: /bond-calculator/
         text: "Estimate repayments"
     - title: "Transfer Cost Calculator"
-      desc: "Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+      desc: "Get a rough idea of the extra costs that come with buying property in South Africa."
       icon: fas fa-calculator
       link:
         url: /transfer-cost-calculator/
@@ -198,21 +188,21 @@ team:
 
 faq:
   title: "Home Loan Questions"
-  text: "Straight answers to common bond application questions."
+  text: "Straight answers to the things people usually want to know before applying for a bond."
   section: home-loan-faq
   list:
     - question: "How does home-loan pre-qualification work?"
-      answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      answer: "Pre-qualification gives you a rough idea of what you may be able to borrow based on your income, expenses, and credit profile. It is a helpful starting point before you make an offer on a property."
     - question: "What documents are usually needed for a bond application?"
-      answer: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
+      answer: "Most banks want your ID, proof of income, recent payslips or tax returns, bank statements, and details of the property you want to buy. If you are self-employed, extra business records may also be required."
     - question: "How long does bond approval take?"
-      answer: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum."
+      answer: "The timeline can vary, but many applications move fairly quickly once the documents are complete. Delays usually happen when the bank needs more information or when the property details are still being finalised."
     - question: "Can self-employed applicants qualify for a home loan?"
-      answer: "Excepteur sint occaecat cupidatat non proident, sunt in culpa."
+      answer: "Yes, self-employed applicants can qualify. Lenders usually want more supporting documents, such as business financials and tax records, so the application can be assessed properly."
     - question: "Does making an enquiry guarantee approval?"
-      answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      answer: "No. An enquiry is just the start of the process. The lender still needs to assess your documents, affordability, and the details of the property before approving the loan."
     - question: "Is Solomon Capital a lender?"
-      answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Solomon Capital is a bond origination service."
+      answer: "No. Solomon Capital is a bond originator and home-loan adviser. We help you prepare and submit your application to banks and guide you through the process, without acting as the lender yourself."
 
 testimonials:
   title: "TESTIMONIALS"

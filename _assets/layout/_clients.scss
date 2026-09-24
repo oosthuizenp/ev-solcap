@@ -6,6 +6,7 @@
   position: relative;
   z-index: 1;
   background-color: $paper;
+  margin-bottom: 55px;
 
   .section-heading {
     @include heading-font;

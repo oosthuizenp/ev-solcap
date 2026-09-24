@@ -1,10 +1,21 @@
 <!-- _includes/nav.html -->
-<nav class="navbar navbar-expand-lg" id="mainNav">
+{% assign light_nav_pages = "/contact/,/privacy-statement/,/data-sharing-agreement/,/legal/" | split: "," %}
+{% assign nav_is_light = false %}
+{% for page_path in light_nav_pages %}
+  {% if page.url == page_path %}
+    {% assign nav_is_light = true %}
+  {% endif %}
+{% endfor %}
+<nav class="navbar navbar-expand-lg{% if nav_is_light %} navbar-light-page{% endif %}" id="mainNav">
   <div class="container">
 
     <a class="navbar-brand js-scroll-trigger" href="{{ site.baseurl }}/">
       {%- if site.logo -%}
-        <img src="{{ site.logo.path }}" alt="{{ site.title }}">
+        {% assign nav_logo = site.logo.path %}
+        {% if page.url == "/contact/" or page.url == "/privacy-statement/" or page.url == "/data-sharing-agreement/" or page.url == "/legal/" %}
+          {% assign nav_logo = "/assets/img/logo/bg-rem-dark-text.png" %}
+        {% endif %}
+        <img src="{{ nav_logo | relative_url }}" alt="{{ site.title }}">
       {%- else -%}
         <span class="site-title">{{ site.title }}</span>
       {%- endif -%}
@@ -33,6 +44,7 @@
         </li>
         {%- endfor -%}
       </ul>
+      <a class="nav-link nav-cta js-scroll-trigger" href="/contact/">Start enquiry</a>
     </div>
 
   </div>

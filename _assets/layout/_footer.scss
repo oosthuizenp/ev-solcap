@@ -4,7 +4,7 @@
 
 footer {
   font-family: $font-family-base; 
-  background-color: $gray-900;
+  background-color: #2E2363;
   color: $white;
   padding: $gap-xl 0 $gap-lg;
   font-size: 0.95rem;
@@ -38,10 +38,18 @@ footer {
   }
 
   .footer-brand {
-    .logo img {
-      height: 100px;
-      width: auto;
+    .logo {
+      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
     }
+
+    .logo img {
+      height: 70px;
+      width: auto;
+      filter: brightness(0) invert(1);
+    }
+
     .site-title {
       @include heading-3;
       font-size: 1.4rem;

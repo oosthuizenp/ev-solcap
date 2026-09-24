@@ -1,31 +1,58 @@
 /* FAQ Section Styling */
 #home-loan-faq {
+  background: #233863 !important;
+  color: #fff;
+  padding: 4rem 0;
+
   .container {
-    max-width: 960px;
+    max-width: 1100px;
   }
+
   .row {
     justify-content: center;
   }
+
+  .section-heading,
+  .section-subheading,
+  h3,
+  .faq-question,
+  .card-header,
+  .card-title {
+    color: #fff !important;
+  }
+
+  .section-subheading {
+    opacity: 0.9;
+  }
+
   .faq-item {
-    background: $white;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 12px;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    box-shadow: none;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+
     &:hover {
       transform: translateY(-4px);
       box-shadow: 0 6px 12px rgba(0,0,0,0.12);
     }
+
     h3 {
       margin-top: 0;
       margin-bottom: 0.75rem;
       font-size: 1.25rem;
-      color: $primary;
     }
-    .text-muted {
+
+    .text-muted,
+    p,
+    li,
+    div,
+    span,
+    a {
+      color: rgba(255, 255, 255, 0.92) !important;
       line-height: 1.6;
-      color: $gray-600;
     }
   }
 }

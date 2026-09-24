@@ -5,7 +5,12 @@
 #about {
   position: relative;
   overflow: hidden;
-  background-color: $paper;
+  background: linear-gradient(180deg, #634E23 0%, #634E23 74%, #233863 100%);
+  color: #ffffff;
+  
+  .section-heading {
+    color: #ffffff;
+  }
   
   // Custom container with 850px max width
   .container-custom {
@@ -28,21 +33,27 @@
     // Inherits from global p: font-size: 20px, font-family: 'Poppins', color: #003366
     line-height: 1.7;
     margin-bottom: 2rem;
+    color: #ffffff;
     
     // Enhanced typography
     p {
       margin-bottom: 1.5rem;
+      color: #ffffff;
       
       &:last-child {
         margin-bottom: 0;
       }
     }
   }
+
+  .text-muted {
+    color: #ffffff !important;
+  }
   
   // Accent text/link styling
   .accent-text {
     font-weight: 400;
-    color: #00acc8;
+    color: rgba(255, 255, 255, 0.9);
     font-size: 1.1em;
     line-height: 1.6;
     margin-top: 1.5rem;
@@ -51,11 +62,11 @@
       color: inherit;
       text-decoration: none;
       transition: all 0.3s ease;
-      border-bottom: 2px solid transparent;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.4);
       
       &:hover {
-        color: #008fa3;
-        border-bottom-color: #008fa3;
+        color: #ffffff;
+        border-bottom-color: #ffffff;
         transform: translateY(-1px);
       }
     }

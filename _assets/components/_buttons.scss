@@ -60,13 +60,14 @@
 
 // ── Variants ──
 .btn-primary {
-  background-color: $secondary;
+  background: linear-gradient(135deg, $secondary 0%, darken($secondary, 8%) 100%);
   color: $white;
-  border-color: darken($secondary, 8%);
+  border-color: transparent;
+  box-shadow: 0 12px 24px rgba(199, 154, 58, 0.22);
 
   &:hover {
-    background-color: darken($secondary, 10%);
-    border-color: darken($secondary, 15%);
+    background: linear-gradient(135deg, darken($secondary, 6%) 0%, darken($secondary, 12%) 100%);
+    border-color: transparent;
     color: $white;
   }
 }

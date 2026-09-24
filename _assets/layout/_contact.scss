@@ -5,19 +5,22 @@
 // ── Section Container ──
 // Break out of Bootstrap .container to allow max-w-7xl (1280px)
 .contact-section {
-  padding: 8rem 0 5rem; // pt-32 pb-20
+  padding: 4rem 0 5rem;
   background: $paper;
-  // Negate Bootstrap container padding
   margin-left: -15px;
   margin-right: -15px;
 }
 
 .contact-container {
-  max-width: 80rem; // max-w-7xl = 1280px
+  max-width: 80rem;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 2rem; // px-8
+  padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.contact-container--lean {
+  max-width: 52rem;
 }
 
 // ── Hero ──
@@ -53,17 +56,29 @@
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 3rem; // gap-12
+  gap: 3rem;
 
   @media (min-width: 1024px) {
     grid-template-columns: repeat(12, 1fr);
-    align-items: start; // items-start
+    align-items: start;
   }
+}
+
+.contact-grid--lean {
+  display: block;
 }
 
 .contact-left {
   @media (min-width: 1024px) {
     grid-column: span 5;
+  }
+}
+
+.contact-left--full {
+  width: 100%;
+  max-width: 100%;
+  @media (min-width: 1024px) {
+    grid-column: auto;
   }
 }
 

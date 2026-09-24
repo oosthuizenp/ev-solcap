@@ -19,7 +19,7 @@ webserver_headers:
     - GET, OPTIONS, HEAD
 
 logo:
-  path: /assets/img/logo/bg-rem-dark-text.png
+  path: /assets/img/logo/bg-rem-white-text.png
   alt: Solomon Capital
 
 social_image: /assets/img/social/social_916x509.jpg

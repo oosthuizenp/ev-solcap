@@ -14,13 +14,16 @@ $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 
 // Brand Colors
-$primary:        #233864; // main brand/navy
-$secondary:      #be9b51; // accent/gold trim and CTAs
-$paper:          #FAF9F6; // warm off-white background
+$primary:        #4D1B36; // deep plum / main text
+$secondary:      #c79a3a; // original gold CTA tone
+$paper:          #F7F3EE; // warm off-white, softer than yellow paper
+$teal:           #DDEAF7; // original blue-supportive panel tone
+$pink:           #FCD8E8; // promo cards
+$form-fill:      #FFF9E5; // form backgrounds
 $white:          #ffffff;
 $black:          #000000;
-$font-color-1:   $primary;   // footer/navy background
-$font-color-2:   $gray-600;   // secondary text
+$font-color-1:   $primary;
+$font-color-2:   #5A4250;
 
 // Spacing
 $gap-sm:         0.5rem;
@@ -30,7 +33,7 @@ $gap-xl:         2.5rem;
 
 // Borders
 $border-width:   3px;
-$border-radius:  0;
+$border-radius:  20px;
 
 // Shadows
 $shadow-sm:      0 2px 6px rgba(0, 0, 0, 0.08);
@@ -38,7 +41,7 @@ $shadow-md:      0 4px 12px rgba(0, 0, 0, 0.15);
 $shadow-lg:      0 8px 24px rgba(0, 0, 0, 0.2);
 
 // Typography
-$font-family-base:   'Poppins', sans-serif;
+$font-family-base:   'Outfit', sans-serif;
 $font-size-base:     1rem;
 $line-height-base:   1.6;
 

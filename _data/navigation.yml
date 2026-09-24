@@ -11,10 +11,4 @@ nav:
   - title: "Calculators"
     section: calculators
 
-  - title: "Team"
-    section: team
-    
-  - title: "Contact"
-    url: /contact/
-
 
