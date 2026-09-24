@@ -57,7 +57,7 @@ header.hero {
 
   .hero-subheading {
     @include body-font;
-    font-size: 1.08rem;
+    font-size: 1.25rem;
     line-height: 1.7;
     color: rgba(255, 255, 255, 0.92);
     margin-bottom: $gap-lg;
