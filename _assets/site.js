@@ -77,6 +77,15 @@ $(function () {
         $("html, body").animate({ scrollTop: 0 }, 800, "easeInOutExpo");
     });
 
+    // Keep the mobile calculator carousel anchored to the first card by default.
+    function resetCalculatorScroll() {
+        if (window.matchMedia("(max-width: 768px)").matches) {
+            $(".calculators-grid").each(function () {
+                this.scrollLeft = 0;
+            });
+        }
+    }
+
     // Fix footer position on short pages
     function fixPageShort() {
         if (window.innerHeight > document.body.offsetHeight) {
@@ -90,6 +99,10 @@ $(function () {
             }
         }
     }
-    $(window).on("load resize", fixPageShort);
+    $(window).on("load resize", function () {
+        fixPageShort();
+        resetCalculatorScroll();
+    });
+    resetCalculatorScroll();
 
 });

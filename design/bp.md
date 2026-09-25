@@ -189,6 +189,19 @@ Each component should only respond at the breakpoints it actually requires.
 
 ## Layout Behaviour
 
+### Mobile fundamentals (core rules)
+
+These are project-wide standards and should be treated as fundamentals for all mobile adaptations.
+
+- Keep the page edge-to-edge on mobile; never allow horizontal overflow caused by `100vw`, negative margins, or full-bleed elements that extend beyond the viewport.
+- Keep fixed actions such as WhatsApp pinned to the visible viewport edge without dragging the page sideways.
+- Hero sections on mobile should use a full-width, non-rounded image panel with copy overlaid directly on the image.
+- On mobile hero layouts, the image should fill the main viewport area (target: ~70vh) and the copy should sit over a dark bottom gradient for legibility.
+- Keep all text contrast high on image overlays; white copy sits over darker lower sections with a subtle alpha gradient.
+- Calculator cards on mobile should behave as a horizontal swipe carousel, with the first card aligned at the left edge and the next card partially peeking into view.
+- Mobile calculator cards must reserve enough height for all content, including the CTA button, so buttons never overlap or extend outside the card.
+- Preserve the desktop layout exactly; adaptive mobile rules should only change at the relevant breakpoints and never alter the desktop experience.
+
 ### Mobile (0–559px)
 
 - Single-column layouts
