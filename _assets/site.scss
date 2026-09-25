@@ -36,8 +36,10 @@
 @import "layout/holding-page";
 
 // 5. Global body styles
+html,
 body {
     overflow-x: hidden;
+    max-width: 100%;
     font-family: $font-family-base;
     background-color: $paper;
     color: $gray-900;

@@ -14,6 +14,7 @@
     <div class="calculators-grid">
       {% for service in site.data.sitetext.calculators.list %}
         <div class="calculator-card">
+          <div class="calculator-count">{{ forloop.index }} of {{ forloop.length }}</div>
           <div class="calculator-icon">
             <i class="{{ service.icon | default: 'fas fa-calculator' }}"></i>
           </div>

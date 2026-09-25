@@ -246,11 +246,13 @@ $gr-5: 6.572rem;    // 136px
 
     .navbar-collapse {
       width: 100%;
-      background: transparent;
+      background: #233863;
+      opacity: 1;
       border-top: none;
       margin-top: $gap-sm;
       padding: $gap-sm 0 $gap-md;
-      box-shadow: none;
+      box-shadow: 0 12px 28px rgba(19, 31, 55, 0.22);
+      border-radius: 0.75rem;
 
       &:not(.show) {
         display: none;
